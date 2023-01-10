@@ -24,13 +24,13 @@ const Blog = ({ posts }: any) => {
 
   return (
     <Container>
-      <div className="max-w-screen-lg mx-auto min-h-screen">
-        <h1 className="p-0 m-0 text-gray-dark text-xl max-w-md mt-32 mb-24">
+      <div className="max-w-screen-lg mx-auto flex flex-col min-h-screen">
+        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-gray-dark text-xl max-w-md mt-32 mb-24">
           Web developer and designer, currently developer experience wrangler at
           Dave.
         </h1>
 
-        <div className="flex flex-col gap-8 relative min-h-screen">
+        <div className="flex flex-col gap-8 relative flex-grow flex-1">
           <FilterBar
             selectedFilter={selectedFilter}
             onSelectFilter={(filter: string) => setSelectedFilter(filter)}
@@ -80,7 +80,8 @@ const Blog = ({ posts }: any) => {
               ))}
             </AnimatePresence>
           </div>
-          <div className="w-3/4 text-center text-sm text-gray opacity-80 mt-auto">
+
+          <div className="flex-1 flex flex-grow w-3/4 items-end justify-start text-center text-sm text-gray opacity-80">
             <img src="/trees.svg" className="w-[200px] h-auto" />
           </div>
         </div>
