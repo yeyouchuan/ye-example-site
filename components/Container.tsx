@@ -2,17 +2,32 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
+import classnames from "classnames";
+
 import Avatar from "./Avatar";
 import Sidebar from "./Sidebar";
 
 import { isNowWithinTime } from "../utils/time";
 
-const Container = ({ children }: { children: React.ReactNode }) => {
+const Container = ({
+  children,
+  dark = false,
+}: {
+  children: React.ReactNode;
+  dark?: boolean;
+}) => {
   const meta = {
     title: "Noah Buscher - Developer",
     description: "",
     image: "tbd",
   };
+
+  const contentClassnames = classnames(
+    "ml-[300px] xl:ml-[375px] px-8 relative",
+    {
+      "bg-gray-dark": dark,
+    }
+  );
 
   return (
     <div>
@@ -45,7 +60,7 @@ const Container = ({ children }: { children: React.ReactNode }) => {
             More about me
           </a>
         </Sidebar>
-        <div className="ml-[300px] xl:ml-[375px] px-8 relative">{children}</div>
+        <div className={contentClassnames}>{children}</div>
       </div>
     </div>
   );

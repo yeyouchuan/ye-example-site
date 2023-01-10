@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import classnames from "classnames";
 
@@ -14,12 +15,23 @@ export const CATEGORIES: any = {
 
 type Category = typeof CATEGORIES[keyof typeof CATEGORIES];
 
+const getLink = (type: String, slug: string): string => {
+  switch (type) {
+    case "Post":
+      return `/posts/${slug}`;
+    case "Photo":
+      return `/media/${slug}`;
+  }
+};
+
 const PostLayout = ({
   caption,
   children,
   category,
   timestamp,
   tile = false,
+  type,
+  slug,
   location,
 }: {
   caption?: string;
@@ -27,13 +39,18 @@ const PostLayout = ({
   category?: Category;
   timestamp?: string;
   tile?: boolean;
+  type: string;
+  slug: string;
   location?: string;
 }) => {
+  const router = useRouter();
+
   const contentClasses = classnames(
     "text-sm rounded-3xl overflow-hidden relative",
     {
       "w-3/4 min-h-[160px]": !tile,
-      "aspect-square w-full h-full transition-transform hover:scale-105": tile,
+      "aspect-square w-full h-full transition-transform hover:scale-105 cursor-pointer":
+        tile,
       "bg-gray-light": category !== CATEGORIES.Post,
       "bg-white border border-gray-light": category === CATEGORIES.Post,
     }
@@ -41,10 +58,18 @@ const PostLayout = ({
 
   return (
     <motion.div
-      layout="position"
-      className="w-full flex flex-row items-end gap-4"
+      layout
+      initial={{ opacity: 0, width: "auto" }}
+      animate={{ opacity: 1, width: "auto" }}
+      exit={{ opacity: 0, width: "auto" }}
+      className="w-full flex flex-row items-end gap-4 cursor-pointer"
     >
-      <div className={contentClasses}>{children}</div>
+      <div
+        className={contentClasses}
+        onClick={() => router.push(getLink(type, slug))}
+      >
+        {children}
+      </div>
       {!tile && (
         <div className="w-1/4 mb-4 flex flex-col gap-7">
           {caption && (

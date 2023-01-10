@@ -11,6 +11,7 @@ specifiers:
   dayjs: ^1.11.7
   eslint: 8.31.0
   eslint-config-next: 13.1.1
+  exif: ^0.6.0
   framer-motion: ^8.2.4
   gray-matter: ^4.0.3
   next: 13.1.1
@@ -30,6 +31,7 @@ dependencies:
   dayjs: 1.11.7
   eslint: 8.31.0
   eslint-config-next: 13.1.1_iukboom6ndih5an6iafl45j2fe
+  exif: 0.6.0
   framer-motion: 8.2.4_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
@@ -1192,6 +1194,14 @@ packages:
   /esutils/2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /exif/0.6.0:
+    resolution: {integrity: sha512-gEwM4uanNMfLnDNKclZ7jPEA99E3rpy4ntoS6QW8u6murZjl1o8qRaPdMoC46Syg3d9/QaET0bYKhWlTwJCPgg==}
+    dependencies:
+      debug: 2.6.9
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /extend-shallow/2.0.1:

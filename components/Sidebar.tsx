@@ -7,7 +7,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
       <div className="absolute bottom-12 left-8 right-8 flex flex-col gap-8 text-xs">
         <div className="bg-gray-light rounded-2xl p-6 w-full flex flex-col gap-6 ">
           Currently available for freelance.
-          <button className="rounded-full w-full px-1 py-2 text-gray-dark bg-white transition-all hover:bg-green">
+          <button className="rounded-full w-full px-1 py-2 text-gray-dark bg-white transition-all hover:bg-accent">
             Email me
           </button>
         </div>

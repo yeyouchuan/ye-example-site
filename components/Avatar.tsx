@@ -15,7 +15,7 @@ const Avatar = ({
       <Image src={image} fill alt={alt} />
     </div>
     {active && (
-      <div className="w-3 h-3 bg-green rounded-full border-[2px] border-white absolute top-[2px] right-[2px]" />
+      <div className="w-3 h-3 bg-accent rounded-full border-[2px] border-white absolute top-[2px] right-[2px]" />
     )}
   </div>
 );

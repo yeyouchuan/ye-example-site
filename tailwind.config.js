@@ -11,7 +11,7 @@ module.exports = {
         "gray-light": "#F4F4F4",
         gray: "#D0D0D0",
         "gray-dark": "#1A1A1A",
-        green: "#00FF19",
+        accent: "#00FF19",
       },
       fontFamily: {
         sans: [

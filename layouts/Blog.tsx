@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 
 import classnames from "classnames";
@@ -23,13 +24,13 @@ const Blog = ({ posts }: any) => {
 
   return (
     <Container>
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto min-h-screen">
         <h1 className="p-0 m-0 text-gray-dark text-xl max-w-md mt-32 mb-24">
           Web developer and designer, currently developer experience wrangler at
           Dave.
         </h1>
 
-        <div className="flex flex-col gap-8 relative">
+        <div className="flex flex-col gap-8 relative ">
           <FilterBar
             selectedFilter={selectedFilter}
             onSelectFilter={(filter: string) => setSelectedFilter(filter)}
@@ -46,6 +47,8 @@ const Blog = ({ posts }: any) => {
                   timestamp={post.data.date}
                   location={post.data.location}
                   caption={post.data.caption}
+                  slug={post.data.slug}
+                  type={post.data.type}
                 >
                   {post.data.type === "Photo" && (
                     <img
@@ -59,12 +62,17 @@ const Blog = ({ posts }: any) => {
                       <h2 className="text-xl text-gray-dark">
                         {post.data.title}
                       </h2>
-                      <p className="text-xs">{post.data.excerpt}</p>
+                      <p className="text-xs text-ellipsis">
+                        {post.data.excerpt}
+                      </p>
 
                       {!isGrid && (
-                        <div className="rounded-full transition-all hover:bg-green hover:border-green cursor-pointer px-5 py-2 text-gray-dark text-xs w-fit ml-auto bg-gray-light">
+                        <Link
+                          href={`/posts/${post.data.slug}`}
+                          className="rounded-full transition-all hover:bg-accent hover:border-accent cursor-pointer px-5 py-2 text-gray-dark text-xs w-fit ml-auto bg-gray-light"
+                        >
                           Read more
-                        </div>
+                        </Link>
                       )}
                     </div>
                   )}
