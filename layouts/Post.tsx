@@ -5,14 +5,8 @@ import Container from "../components/Container";
 
 const BlogLayout = ({}) => {
   return (
-    <Container>
+    <Container showHomeLink>
       <article className="max-w-screen-lg mx-auto relative min-h-screen mb-24">
-        <Link
-          href="/"
-          className="rounded-full transition-all hover:scale-105 hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10"
-        >
-          Return home
-        </Link>
         <h1 className="p-0 m-0 text-charcoal text-[1.953rem] leading-tight mt-32 mb-8 max-w-lg mx-auto text-center">
           A Trip to Coachella Valley Preserve and Joshua Tree
         </h1>

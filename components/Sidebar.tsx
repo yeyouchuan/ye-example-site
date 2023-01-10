@@ -11,9 +11,11 @@ import { isNowWithinTime } from "../utils/time";
 const Sidebar = ({
   avatar,
   children,
+  showHomeLink = false,
 }: {
   avatar: string;
   children: React.ReactNode;
+  showHomeLink?: boolean;
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -36,32 +38,57 @@ const Sidebar = ({
         <div className="absolute bottom-12 left-8 right-8 flex flex-col gap-8 text-xs">
           <div className="bg-gray-light rounded-2xl p-6 w-full flex flex-col gap-6 ">
             Currently available for freelance.
-            <button className="rounded-full w-full px-1 py-2 text-charcoal bg-white transition-all hover:bg-accent">
+            <Link
+              href="mailto:me@noahbuscher.com"
+              className="rounded-full w-full px-1 py-2 text-charcoal bg-white transition-all hover:bg-accent text-center"
+            >
               Email me
-            </button>
+            </Link>
           </div>
           &copy; {new Date().getFullYear()}
         </div>
       </div>
 
-      <div className="flex flex-col md:hidden p-2 bg-white/70 backdrop-blur-md border border-gray-light rounded-3xl fixed top-8 left-8 right-8 z-10">
-        <div className="flex flex-row">
-          <Link href="/">
-            <Avatar
-              image={avatar}
-              alt="Noah Buscher"
-              active={isNowWithinTime(9, 17, "America/Vancouver")}
-              small
-            />
-          </Link>
-          <button
-            className="flex-1 flex-grow-0 w-fit ml-auto"
-            onClick={() => setIsDropdownOpen((open) => !open)}
-          >
-            <MenuIcon size={24} />
-          </button>
+      {showHomeLink && (
+        <Link
+          href="/"
+          className="rounded-full transition-all hover:scale-105 hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block"
+        >
+          Return home
+        </Link>
+      )}
+
+      <div className="fixed top-8 left-8 right-8 z-10 flex flex-row gap-2 flex-col">
+        <div className="w-full flex flex-col md:hidden p-2 bg-white/70 backdrop-blur-md rounded-3xl border border-gray-light">
+          <div className="flex flex-row items-center">
+            <Link href="/">
+              <Avatar
+                image={avatar}
+                alt="Noah Buscher"
+                active={isNowWithinTime(9, 17, "America/Vancouver")}
+                small
+              />
+            </Link>
+            {!showHomeLink && (
+              <button
+                className="flex-1 flex-grow-0 w-fit ml-auto"
+                onClick={() => setIsDropdownOpen((open) => !open)}
+              >
+                <MenuIcon size={32} />
+              </button>
+            )}
+
+            {showHomeLink && (
+              <Link
+                href="/"
+                className="cursor-pointer text-charcoal text-xs ml-auto rounded-full bg-gray-light px-4 py-2"
+              >
+                Return home
+              </Link>
+            )}
+          </div>
+          <motion.div className={dropdownClassnames}>{children}</motion.div>
         </div>
-        <motion.div className={dropdownClassnames}>{children}</motion.div>
       </div>
     </div>
   );

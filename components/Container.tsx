@@ -12,9 +12,11 @@ import { isNowWithinTime } from "../utils/time";
 const Container = ({
   children,
   dark = false,
+  showHomeLink = false,
 }: {
   children: React.ReactNode;
   dark?: boolean;
+  showHomeLink?: boolean;
 }) => {
   const meta = {
     title: "Noah Buscher - Developer",
@@ -41,7 +43,7 @@ const Container = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Sidebar avatar="/me.jpg">
+        <Sidebar avatar="/mealt.jpg" showHomeLink={showHomeLink}>
           <div>
             <h3 className="p-0 m-0 text-charcoal text-xs">Noah Buscher</h3>
             <p className="p-0 m-0 text-charcoal text-xs">
@@ -49,9 +51,12 @@ const Container = ({
             </p>
           </div>
           <h3 className="p-0 m-0 text-charcoal text-xs">Senior SWE, Dave</h3>
-          <a className="p-0 m-0 text-charcoal text-xs underline">
+          <Link
+            href="/about"
+            className="p-0 m-0 text-charcoal text-xs underline"
+          >
             More about me
-          </a>
+          </Link>
         </Sidebar>
         <div className={contentClassnames}>{children}</div>
       </div>
