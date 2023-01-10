@@ -17,7 +17,7 @@ const PhotoLayout = ({ exif, post }: any) => {
 
         <div className="flex flex-col items-center justify-center gap-8 text-xs text-center max-w-screen-md h-screen mx-auto">
           <img
-            src="/media/jt.jpeg"
+            src={post.data.images}
             className="rounded-3xl max-w-screen-lg mx-auto w-full"
           />
           <div className="w-screen-md bg-gray-light px-8 py-5 rounded-full">

@@ -1,9 +1,9 @@
 ---
-slug: joshua-tree
-date: November 5, 2022
+slug: desert-walk
+date: January 8, 2023
 author: Noah Buscher
 location: Joshua Tree, CA
 caption: Blah blah blah.
-images: /media/jt2.jpeg
+images: /media/jt.jpeg
 type: Photo
 ---

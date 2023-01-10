@@ -30,7 +30,7 @@ const Blog = ({ posts }: any) => {
           Dave.
         </h1>
 
-        <div className="flex flex-col gap-8 relative ">
+        <div className="flex flex-col gap-8 relative min-h-screen">
           <FilterBar
             selectedFilter={selectedFilter}
             onSelectFilter={(filter: string) => setSelectedFilter(filter)}
@@ -80,12 +80,8 @@ const Blog = ({ posts }: any) => {
               ))}
             </AnimatePresence>
           </div>
-          <div className="w-full flex flex-row items-end gap-4">
-            <div className="w-3/4 h-[160px] text-center text-sm text-gray opacity-80 flex items-end justify-start">
-              <img src="/trees.svg" className="w-[200px] h-auto" />
-            </div>
-
-            <div className="bg-white w-1/4 mb-4 flex flex-col gap-7"></div>
+          <div className="w-3/4 text-center text-sm text-gray opacity-80 mt-auto">
+            <img src="/trees.svg" className="w-[200px] h-auto" />
           </div>
         </div>
       </div>
