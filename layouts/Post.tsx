@@ -13,7 +13,7 @@ const BlogLayout = ({}) => {
         >
           Return home
         </Link>
-        <h1 className="p-0 m-0 text-gray-dark text-[1.953rem] leading-tight mt-32 mb-8 max-w-lg mx-auto text-center">
+        <h1 className="p-0 m-0 text-charcoal text-[1.953rem] leading-tight mt-32 mb-8 max-w-lg mx-auto text-center">
           A Trip to Coachella Valley Preserve and Joshua Tree
         </h1>
         <div className="flex flex-row gap-8 text-xs mb-24 text-center max-w-screen-md mx-auto">

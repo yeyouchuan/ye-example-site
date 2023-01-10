@@ -16,21 +16,24 @@ const Location = ({
   <svg
     width={size}
     height={size}
-    viewBox="0 0 11 13"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     stroke={color}
     {...props}
   >
     <path
-      d="M10 5.74138C10 8.77586 5.5 12 5.5 12C5.5 12 1 8.77586 1 5.74138C1 3.08621 3.11413 1 5.5 1C7.88586 1 10 3.08621 10 5.74138Z"
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M18.25 11C18.25 15 12 19.25 12 19.25C12 19.25 5.75 15 5.75 11C5.75 7.5 8.68629 4.75 12 4.75C15.3137 4.75 18.25 7.5 18.25 11Z"
     />
-    <path
-      d="M5.5 7C6.32843 7 7 6.32843 7 5.5C7 4.67157 6.32843 4 5.5 4C4.67157 4 4 4.67157 4 5.5C4 6.32843 4.67157 7 5.5 7Z"
+    <circle
+      cx="12"
+      cy="11"
+      r="2.25"
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth="1.5"
     />
   </svg>
 );

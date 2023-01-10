@@ -23,9 +23,9 @@ const Container = ({
   };
 
   const contentClassnames = classnames(
-    "ml-[300px] xl:ml-[375px] px-8 relative",
+    "ml-0 md:ml-[300px] xl:ml-[375px] px-8 relative",
     {
-      "bg-gray-dark": dark,
+      "bg-charcoal": dark,
     }
   );
 
@@ -41,22 +41,15 @@ const Container = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Sidebar>
-          <Link href="/">
-            <Avatar
-              image="/me.jpg"
-              alt="Noah Buscher"
-              active={isNowWithinTime(9, 17, "America/Vancouver")}
-            />
-          </Link>
+        <Sidebar avatar="/me.jpg">
           <div>
-            <h3 className="p-0 m-0 text-gray-dark text-xs">Noah Buscher</h3>
-            <p className="p-0 m-0 text-gray-dark text-xs">
+            <h3 className="p-0 m-0 text-charcoal text-xs">Noah Buscher</h3>
+            <p className="p-0 m-0 text-charcoal text-xs">
               B. 1999 in Iowa. Based in Palm Springs, CA.
             </p>
           </div>
-          <h3 className="p-0 m-0 text-gray-dark text-xs">Senior SWE, Dave</h3>
-          <a className="p-0 m-0 text-gray-dark text-xs underline">
+          <h3 className="p-0 m-0 text-charcoal text-xs">Senior SWE, Dave</h3>
+          <a className="p-0 m-0 text-charcoal text-xs underline">
             More about me
           </a>
         </Sidebar>

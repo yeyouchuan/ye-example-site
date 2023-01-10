@@ -25,7 +25,7 @@ const Blog = ({ posts }: any) => {
   return (
     <Container>
       <div className="max-w-screen-lg mx-auto flex flex-col min-h-screen">
-        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-gray-dark text-xl max-w-md mt-32 mb-24">
+        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-24">
           Web developer and designer, currently developer experience wrangler at
           Dave.
         </h1>
@@ -38,6 +38,9 @@ const Blog = ({ posts }: any) => {
           />
 
           <div className={containerClasses}>
+            {getFilteredPosts(posts, selectedFilter).length === 0 && (
+              <p className="text-xs text-gray">Nothing to see here (yet)</p>
+            )}
             <AnimatePresence>
               {getFilteredPosts(posts, selectedFilter).map((post: any) => (
                 <PostLayout
@@ -59,17 +62,17 @@ const Blog = ({ posts }: any) => {
 
                   {post.data.type === "Post" && (
                     <div className="p-8 relative flex flex-col gap-4">
-                      <h2 className="text-xl text-gray-dark">
+                      <h2 className="text-xl text-charcoal flex-1 flex-grow-0">
                         {post.data.title}
                       </h2>
-                      <p className="text-xs text-ellipsis">
+                      <p className="text-xs text-ellipsis flex-1 flex-grow overflow-hidden whitespace-nowrap">
                         {post.data.excerpt}
                       </p>
 
                       {!isGrid && (
                         <Link
                           href={`/posts/${post.data.slug}`}
-                          className="rounded-full transition-all hover:bg-accent hover:border-accent cursor-pointer px-5 py-2 text-gray-dark text-xs w-fit ml-auto bg-gray-light"
+                          className="rounded-full transition-all hover:bg-accent hover:border-accent cursor-pointer px-5 py-2 text-charcoal text-xs w-fit ml-auto bg-gray-light"
                         >
                           Read more
                         </Link>

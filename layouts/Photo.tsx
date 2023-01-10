@@ -24,19 +24,19 @@ const PhotoLayout = ({ exif, post }: any) => {
             <div className="flex flex-row gap-8">
               <div>
                 <small className="text-gray">Shutter speed</small>
-                <p className="text-gray-dark">1/{exif?.shutterSpeed || "--"}</p>
+                <p className="text-charcoal">1/{exif?.shutterSpeed || "--"}</p>
               </div>
               <div>
                 <small className="text-gray">Aperature</small>
-                <p className="text-gray-dark">f/{exif?.aperature || "--"}</p>
+                <p className="text-charcoal">f/{exif?.aperature || "--"}</p>
               </div>
               <div>
                 <small className="text-gray">ISO</small>
-                <p className="text-gray-dark">{exif?.iso || "--"}</p>
+                <p className="text-charcoal">{exif?.iso || "--"}</p>
               </div>
               <div>
                 <small className="text-gray">Taken on</small>
-                <p className="text-gray-dark">{exif?.camera || "--"}</p>
+                <p className="text-charcoal">{exif?.camera || "--"}</p>
               </div>
             </div>
           </div>
