@@ -11,3 +11,9 @@
 ::selection {
   background: #00ff19;
 }
+
+html,
+body {
+  background-color: #fcfcfc;
+  color: #282828;
+}

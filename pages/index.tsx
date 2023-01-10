@@ -1,5 +1,5 @@
-import Container from "../components/Container";
+import BlogLayout from "../layouts/Blog";
 
 export default function Home() {
-  return <Container />;
+  return <BlogLayout />;
 }
