@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 /**
  * Icon from https://iconic.app
@@ -13,12 +14,15 @@ const Grid = ({
   size?: number;
   [prop: string]: any;
 }) => (
-  <svg
+  <motion.svg
     width={size}
     height={size}
     fill="none"
     viewBox="0 0 24 24"
     stroke={color}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
     {...props}
   >
     <path
@@ -45,7 +49,7 @@ const Grid = ({
       strokeWidth="1.5"
       d="M13.75 14.75C13.75 14.1977 14.1977 13.75 14.75 13.75H18.25C18.8023 13.75 19.25 14.1977 19.25 14.75V18.25C19.25 18.8023 18.8023 19.25 18.25 19.25H14.75C14.1977 19.25 13.75 18.8023 13.75 18.25V14.75Z"
     />
-  </svg>
+  </motion.svg>
 );
 
 export default Grid;

@@ -36,6 +36,7 @@ const Blog = ({ posts }: any) => {
             selectedFilter={selectedFilter}
             onSelectFilter={(filter: string) => setSelectedFilter(filter)}
             onLayoutToggle={() => setIsGrid((grid) => !grid)}
+            isGrid={isGrid}
           />
 
           <div className={containerClasses}>

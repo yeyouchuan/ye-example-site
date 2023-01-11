@@ -1,7 +1,9 @@
 import React from "react";
+import { AnimatePresence } from "framer-motion";
 import classnames from "classnames";
 
 import GridIcon from "./icons/GridIcon";
+import RowsIcon from "./icons/RowsIcon";
 
 import { CATEGORIES } from "./PostCard";
 
@@ -29,10 +31,12 @@ const FilterBar = ({
   onLayoutToggle,
   onSelectFilter,
   selectedFilter = "",
+  isGrid = false,
 }: {
   onLayoutToggle: any;
   onSelectFilter: any;
   selectedFilter: string;
+  isGrid?: boolean;
 }) => {
   return (
     <div className="flex flex-row items-end md:items-center justify-center mb-2 gap-4">
@@ -58,7 +62,10 @@ const FilterBar = ({
           className="text-xs w-fit ml-auto flex-grow-0"
           onClick={onLayoutToggle}
         >
-          <GridIcon size={24} />
+          <AnimatePresence>
+            {!isGrid && <GridIcon size={24} />}
+            {isGrid && <RowsIcon size={24} />}
+          </AnimatePresence>
         </button>
       </div>
     </div>
