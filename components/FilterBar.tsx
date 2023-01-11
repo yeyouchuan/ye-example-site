@@ -54,7 +54,8 @@ const FilterBar = ({
             key={cat}
             onClick={() => onSelectFilter(cat)}
           >
-            {cat}s
+            {cat}
+            {cat !== "Work" && "s"}
           </FilterButton>
         ))}
       </div>

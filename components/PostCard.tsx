@@ -9,8 +9,8 @@ import LocationIcon from "./icons/LocationIcon";
 
 export const CATEGORIES: any = {
   Post: "Post",
+  Work: "Work",
   Photo: "Photo",
-  Blurb: "Blurb",
 };
 
 export type Category = typeof CATEGORIES[keyof typeof CATEGORIES];
@@ -87,7 +87,8 @@ const PostLayout = ({
               <li className="flex-1 hidden lg:flex flex-row items-center gap-2">
                 <FolderIcon />
                 <time className="text-xs text-gray">
-                  {CATEGORIES[category]}s
+                  {CATEGORIES[category]}
+                  {category !== "Work" && "s"}
                 </time>
               </li>
             )}

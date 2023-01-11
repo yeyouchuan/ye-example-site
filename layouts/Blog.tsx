@@ -46,7 +46,8 @@ const Blog = ({ posts }: any) => {
           <div className={containerClasses}>
             {getFilteredPosts(posts, selectedFilter).length === 0 && (
               <p className="text-xs text-gray">
-                No posts in {selectedFilter}s (yet)
+                No posts in {selectedFilter}
+                {selectedFilter !== "Work" && "s"} (yet)
               </p>
             )}
             <AnimatePresence>
