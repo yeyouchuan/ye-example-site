@@ -19,7 +19,7 @@ const About = ({}) => (
 
         <p className="text-charcoal text-sm leading-7 max-w-lg">
           I&apos;m currently a senior software engineer at Dave (a neobanking
-          platform), working on the frontend infrastructure. Most of my days
+          platform) working on the frontend infrastructure. Most of my days
           consist of tweaking configs, writing handy CLIs, and chasing those
           (always flaky) CI pipeline issues. Outside of my full-time, I also
           take on a few freelance projects a year.{" "}
