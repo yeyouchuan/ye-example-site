@@ -82,10 +82,24 @@ const Container = ({
             <div className="flex-1 flex flex-grow ml-0 md:ml-[300px] xl:ml-[375px]">
               <div className="flex-1 flex-grow bg-[#F4F4F4] text-charcoal px-8 py-8">
                 <div className="max-w-screen-lg mx-auto">
-                  <div className="mx-auto max-w-screen-lg">
+                  <div className="mx-auto max-w-screen-lg flex flex-col gap-2">
                     <p className="text-xs text-gray">
-                      Last updated: January 2023
+                      Find me on{" "}
+                      <Link
+                        className="underline inline"
+                        href="https://github.com/noahbuscher"
+                      >
+                        GitHub
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        className="underline inline"
+                        href="https://github.com/noahbuscher"
+                      >
+                        Twitter
+                      </Link>
                     </p>
+                    <p className="text-xs text-gray">Updated January 2023</p>
                   </div>
                 </div>
               </div>
