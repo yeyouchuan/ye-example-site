@@ -30,24 +30,33 @@ const PostLayout = ({
           {post.data.title}
         </h1>
         <div className="flex flex-row gap-8 text-xs mb-24 text-center max-w-screen-md mx-auto">
-          <div className="flex-1">
-            <small className="text-gray">Publish date</small>
-            <p>{post.data.date}</p>
-          </div>
-          <div className="flex-1 hidden md:block">
-            <small className="text-gray">Location posted</small>
-            <p>{post.data.location}</p>
-          </div>
+          {post?.data?.date && (
+            <div className="flex-1">
+              <small className="text-gray">Publish date</small>
+              <p>{post.data.date}</p>
+            </div>
+          )}
+
+          {post?.data?.location && (
+            <div className="flex-1 hidden md:block">
+              <small className="text-gray">Location posted</small>
+              <p>{post.data.location}</p>
+            </div>
+          )}
+
           <div className="flex-1">
             <small className="text-gray">Read time</small>
             <p>
               {timeToRead} minute{timeToRead > 1 ? "s" : ""}
             </p>
           </div>
-          <div className="flex-1 hidden md:block">
-            <small className="text-gray">Author</small>
-            <p>{post.data.author}</p>
-          </div>
+
+          {post?.data?.author && (
+            <div className="flex-1 hidden md:block">
+              <small className="text-gray">Author</small>
+              <p>{post.data.author}</p>
+            </div>
+          )}
         </div>
         <div
           className="flex flex-col gap-12 justify-center"

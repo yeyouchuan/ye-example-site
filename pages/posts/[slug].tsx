@@ -1,11 +1,7 @@
 import React from "react";
-import * as ReactDOMServer from "react-dom/server";
 import { promises as fs } from "fs";
 import path from "path";
-// @ts-ignore
-import exif from "exif";
 import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
 
 import PostLayout from "../../layouts/Post";
 import { renderMarkdownToHTML } from "../../utils/markdown";

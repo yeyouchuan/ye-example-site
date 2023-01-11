@@ -49,7 +49,7 @@ const FilterBar = ({
             key={cat}
             onClick={() => onSelectFilter(cat)}
           >
-            {cat}
+            {cat}s
           </FilterButton>
         ))}
       </div>

@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@mdx-js/react': ^2.2.1
   '@next/font': 13.1.1
   '@types/node': 18.11.18
   '@types/react': 18.0.26
@@ -14,7 +13,6 @@ specifiers:
   exif: ^0.6.0
   framer-motion: ^8.2.4
   gray-matter: ^4.0.3
-  markdown-to-jsx: ^7.1.8
   next: 13.1.1
   postcss: ^8.4.21
   react: 18.2.0
@@ -25,7 +23,6 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
-  '@mdx-js/react': 2.2.1_react@18.2.0
   '@next/font': 13.1.1
   classnames: 2.3.2
   dayjs: 1.11.7
@@ -34,7 +31,6 @@ dependencies:
   exif: 0.6.0
   framer-motion: 8.2.4_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
-  markdown-to-jsx: 7.1.8_react@18.2.0
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -115,16 +111,6 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
-    dev: false
-
-  /@mdx-js/react/2.2.1_react@18.2.0:
-    resolution: {integrity: sha512-YdXcMcEnqZhzql98RNrqYo9cEhTTesBiCclEtoiQUbJwx87q9453GTapYU6kJ8ZZ2ek1Vp25SiAXEFy5O/eAPw==}
-    peerDependencies:
-      react: '>=16'
-    dependencies:
-      '@types/mdx': 2.0.3
-      '@types/react': 18.0.26
-      react: 18.2.0
     dev: false
 
   /@motionone/animation/10.15.1:
@@ -365,10 +351,6 @@ packages:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
     dependencies:
       '@types/unist': 2.0.6
-    dev: false
-
-  /@types/mdx/2.0.3:
-    resolution: {integrity: sha512-IgHxcT3RC8LzFLhKwP3gbMPeaK7BM9eBH46OdapPA7yvuIUJ8H6zHZV53J8hGZcTSnt95jANt+rTBNUUc22ACQ==}
     dev: false
 
   /@types/ms/0.7.31:
@@ -1852,15 +1834,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: false
-
-  /markdown-to-jsx/7.1.8_react@18.2.0:
-    resolution: {integrity: sha512-rRSa1aFmFnpDRFAhv5vIkWM4nPaoB9vnzIjuIKa1wGupfn2hdCNeaQHKpu4/muoc8n8J7yowjTP2oncA4/Rbgg==}
-    engines: {node: '>= 10'}
-    peerDependencies:
-      react: '>= 0.14.0'
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /mdast-util-definitions/5.1.1:
