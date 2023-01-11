@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/Link";
 import * as ReactDOMServer from "react-dom/server";
 import ReactMarkdown from "react-markdown";
 
@@ -13,9 +14,17 @@ const Text = ({ children, node }: any) => {
     return <Img src={image.properties.src} />;
   }
   return (
-    <p className="text-sm leading-7 max-w-screen-md mx-auto">{children}</p>
+    <p className="flex-1 flex-grow w-full text-sm leading-7 max-w-screen-md mx-auto">
+      {children}
+    </p>
   );
 };
+
+const Anchor = ({ children, href }: any) => (
+  <Link href={href} className="inline underline">
+    {children}
+  </Link>
+);
 
 export const renderMarkdownToHTML = (markup: string) => {
   return ReactDOMServer.renderToStaticMarkup(
@@ -23,6 +32,7 @@ export const renderMarkdownToHTML = (markup: string) => {
       components={{
         p: Text,
         img: Img,
+        a: Anchor,
       }}
     >
       {markup.trim()!}

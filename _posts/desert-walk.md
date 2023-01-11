@@ -1,9 +1,9 @@
 ---
 slug: joshua-tree
-date: November 5, 2022
+date: August 20, 2022
 author: Noah Buscher
 location: Joshua Tree, CA
-caption: Blah blah blah.
+caption: Joshua Tree National Park just minutes after a summer rainstorm.
 images: /media/jt2.jpeg
 type: Photo
 ---

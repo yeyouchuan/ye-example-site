@@ -59,7 +59,7 @@ const PostLayout = ({
           )}
         </div>
         <div
-          className="flex flex-col gap-12 justify-center"
+          className="flex flex-col gap-8"
           dangerouslySetInnerHTML={{ __html: renderedPostContent }}
         />
       </article>
