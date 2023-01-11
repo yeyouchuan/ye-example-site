@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import * as ReactDOMServer from "react-dom/server";
 import ReactMarkdown from "react-markdown";
 
