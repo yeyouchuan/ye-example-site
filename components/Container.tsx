@@ -20,12 +20,12 @@ const Container = ({
 }) => {
   const meta = {
     title: "Noah Buscher - Developer",
-    description: "",
+    description: "Web developer and designer based in Palm Springs, CA.",
     image: "tbd",
   };
 
   const contentClassnames = classnames(
-    "ml-0 md:ml-[300px] xl:ml-[375px] px-8 relative",
+    "ml-0 md:ml-[300px] xl:ml-[375px] px-8 relative flex-1 flex-grow-0",
     {
       "bg-charcoal": dark,
     }
@@ -43,7 +43,7 @@ const Container = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Sidebar avatar="/mealt.jpg" showHomeLink={showHomeLink}>
+        <Sidebar avatar="/me.jpg" showHomeLink={showHomeLink}>
           <div>
             <h3 className="p-0 m-0 text-charcoal text-xs">Noah Buscher</h3>
             <p className="p-0 m-0 text-charcoal text-xs">
@@ -58,7 +58,26 @@ const Container = ({
             More about me
           </Link>
         </Sidebar>
-        <div className={contentClassnames}>{children}</div>
+        <div className="min-h-screen flex flex-col">
+          <div className={contentClassnames}>{children}</div>
+          <div className="flex-1 justify-end flex flex-col flex-grow">
+            <div className="flex-1 flex-grow-0 ml-auto pr-8">
+              <img
+                src="/trees.svg"
+                className="w-[120px] md:w-[200px] h-auto ml-auto"
+              />
+            </div>
+            <div className="flex-1 flex flex-grow ml-0 md:ml-[300px] xl:ml-[375px]">
+              <div className="flex-1 flex-grow bg-[#F4F4F4] text-charcoal px-8 py-8">
+                <div className="max-w-screen-lg mx-auto">
+                  <div className="mx-auto max-w-screen-lg">
+                    <p className="text-xs text-gray">asdf</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

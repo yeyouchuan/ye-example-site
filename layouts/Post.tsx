@@ -29,7 +29,7 @@ const PostLayout = ({
         <h1 className="p-0 m-0 text-charcoal text-[1.953rem] leading-tight mt-32 mb-8 max-w-lg mx-auto text-center">
           {post.data.title}
         </h1>
-        <div className="flex flex-row gap-8 text-xs mb-24 text-center max-w-screen-md mx-auto">
+        <div className="flex flex-row gap-8 text-xs mb-16 text-center max-w-screen-md mx-auto">
           {post?.data?.date && (
             <div className="flex-1">
               <small className="text-gray">Publish date</small>

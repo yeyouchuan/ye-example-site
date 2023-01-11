@@ -25,11 +25,14 @@ const Blog = ({ posts }: any) => {
 
   return (
     <Container>
-      <div className="max-w-screen-lg mx-auto flex flex-col min-h-screen">
-        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
-          Web developer and designer, currently developer experience wrangler at
-          Dave.
+      <div className="max-w-screen-lg mx-auto flex flex-col mb-8 md:mb-16">
+        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-3">
+          Web developer and designer in Palm Springs. Currently on the infra
+          team at Dave.
         </h1>
+        <small className="text-gray text-xs max-w-md mb-12 md:mb-24">
+          Last updated: January 2023
+        </small>
 
         <div className="flex flex-col gap-8 relative flex-grow flex-1">
           <FilterBar
@@ -40,7 +43,9 @@ const Blog = ({ posts }: any) => {
 
           <div className={containerClasses}>
             {getFilteredPosts(posts, selectedFilter).length === 0 && (
-              <p className="text-xs text-gray">Nothing to see here (yet)</p>
+              <p className="text-xs text-gray">
+                No posts in {selectedFilter}s (yet)
+              </p>
             )}
             <AnimatePresence>
               {getFilteredPosts(posts, selectedFilter).map((post: any) => (
@@ -64,7 +69,7 @@ const Blog = ({ posts }: any) => {
 
                   {post.data.type === "Post" && (
                     <div className="p-6 relative flex flex-col gap-4">
-                      <h2 className="text-xl text-charcoal flex-1 flex-grow-0">
+                      <h2 className="text-lg text-charcoal flex-1 flex-grow-0">
                         {post.data.title}
                       </h2>
                       <p className="text-xs text-ellipsis flex-1 flex-grow overflow-hidden whitespace-nowrap">
@@ -84,10 +89,6 @@ const Blog = ({ posts }: any) => {
                 </PostCard>
               ))}
             </AnimatePresence>
-          </div>
-
-          <div className="flex-1 flex flex-grow w-3/4 items-end justify-start text-center text-sm text-gray opacity-80">
-            <img src="/trees.svg" className="w-[200px] h-auto" />
           </div>
         </div>
       </div>

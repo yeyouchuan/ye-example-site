@@ -13,7 +13,7 @@ const Text = ({ children, node }: any) => {
     return <Img src={image.properties.src} />;
   }
   return (
-    <p className="text-sm leading-8 max-w-screen-md mx-auto">{children}</p>
+    <p className="text-sm leading-7 max-w-screen-md mx-auto">{children}</p>
   );
 };
 

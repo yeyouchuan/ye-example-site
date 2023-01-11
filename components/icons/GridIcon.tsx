@@ -6,7 +6,7 @@ import React from "react";
 
 const Grid = ({
   color = "#C9C9C9",
-  size = 16,
+  size = 18,
   ...props
 }: {
   color?: string;

@@ -50,7 +50,7 @@ const PostLayout = ({
   const contentClasses = classnames(
     "text-sm rounded-lg overflow-hidden relative",
     {
-      "w-full md:w-3/4 min-h-[160px]": !tile,
+      "w-full lg:w-3/4 min-h-[160px]": !tile,
       "aspect-square w-full transition-transform hover:scale-105 cursor-pointer":
         tile,
       "bg-gray-light": category !== CATEGORIES.Post,
@@ -64,7 +64,7 @@ const PostLayout = ({
       initial={{ opacity: 0, width: "auto" }}
       animate={{ opacity: 1, width: "auto" }}
       exit={{ opacity: 0, width: "auto" }}
-      className="w-full flex flex-col md:flex-row md:items-end gap-4 cursor-pointer"
+      className="w-full flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-4 cursor-pointer"
     >
       <div
         className={contentClasses}
@@ -73,18 +73,18 @@ const PostLayout = ({
         {children}
       </div>
       {!tile && (
-        <div className="w-full md:w-1/4 mb-4 flex flex-row md:flex-col gap-7">
+        <div className="w-full lg:w-1/4 mb-4 flex flex-col-reverse lg:flex-col gap-3 lg:gap-7">
           {caption && (
-            <div className="w-1/2 md:w-full">
-              <p className="p-0 m-0 text-charcoal text-xs w-3/4 xl:w-full">
+            <div className="flex-1 w-full">
+              <p className="p-0 m-0 text-charcoal text-xs lg:w-3/4 xl:w-full">
                 {caption}
               </p>
             </div>
           )}
 
-          <ul className="flex-1 flex flex-col gap-1">
+          <ul className="flex-1 flex flex-row lg:flex-col gap-1">
             {category && (
-              <li className="flex flex-row-reverse md:flex-row items-center gap-2">
+              <li className="flex-1 hidden lg:flex flex-row items-center gap-2">
                 <FolderIcon />
                 <time className="text-xs text-gray">
                   {CATEGORIES[category]}
@@ -93,14 +93,14 @@ const PostLayout = ({
             )}
 
             {timestamp && (
-              <li className="flex flex-row-reverse md:flex-row items-center gap-2">
+              <li className="flex-1 flex lg:flex-row items-center gap-2">
                 <CalendarIcon />
                 <time className="text-xs text-gray">{timestamp}</time>
               </li>
             )}
 
             {location && (
-              <li className="flex flex-row-reverse md:flex-row items-center gap-2">
+              <li className="flex-1 flex lg:flex-row items-center gap-2">
                 <LocationIcon />
                 <p className="text-xs text-gray">{location}</p>
               </li>

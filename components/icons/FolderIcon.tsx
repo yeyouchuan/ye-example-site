@@ -6,7 +6,7 @@ import React from "react";
 
 const Calendar = ({
   color = "#D0D0D0",
-  size = 16,
+  size = 18,
   ...props
 }: {
   color?: string;
