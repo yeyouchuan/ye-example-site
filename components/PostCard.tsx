@@ -50,11 +50,11 @@ const PostLayout = ({
   const contentClasses = classnames(
     "text-sm rounded-lg overflow-hidden relative",
     {
-      "w-full lg:w-3/4 min-h-[160px]": !tile,
+      "w-full lg:w-3/4": !tile,
       "aspect-square w-full transition-transform hover:scale-105 cursor-pointer":
         tile,
       "bg-gray-light": category !== CATEGORIES.Post,
-      "bg-white border border-gray-light": category === CATEGORIES.Post,
+      "bg-amber-50 border-amber-200 border": category === CATEGORIES.Post,
     }
   );
 
@@ -87,7 +87,7 @@ const PostLayout = ({
               <li className="flex-1 hidden lg:flex flex-row items-center gap-2">
                 <FolderIcon />
                 <time className="text-xs text-gray">
-                  {CATEGORIES[category]}
+                  {CATEGORIES[category]}s
                 </time>
               </li>
             )}

@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
 import classnames from "classnames";
 
 import Avatar from "./Avatar";
@@ -59,7 +60,18 @@ const Container = ({
           </Link>
         </Sidebar>
         <div className="min-h-screen flex flex-col">
-          <div className={contentClassnames}>{children}</div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              type: "ease-in-out",
+            }}
+            className={contentClassnames}
+          >
+            {children}
+          </motion.div>
+
           <div className="flex-1 justify-end flex flex-col flex-grow">
             <div className="flex-1 flex-grow-0 ml-auto pr-8">
               <img
@@ -71,7 +83,9 @@ const Container = ({
               <div className="flex-1 flex-grow bg-[#F4F4F4] text-charcoal px-8 py-8">
                 <div className="max-w-screen-lg mx-auto">
                   <div className="mx-auto max-w-screen-lg">
-                    <p className="text-xs text-gray">asdf</p>
+                    <p className="text-xs text-gray">
+                      Last updated: January 2023
+                    </p>
                   </div>
                 </div>
               </div>
