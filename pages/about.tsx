@@ -19,13 +19,13 @@ const About = ({}) => (
           <p className="text-charcoal text-sm leading-7 max-w-lg">
             I am a web developer and designer currently working remotely from
             Palm Springs, California. I grew up in rural Iowa, but moved around
-            quite often in my childhood. When I&apos;m not behind the computer,
-            you can probably find me on a road trip, working on my pilot&apos;s
-            license, or at one of the many fabulous restaurants here.
+            quite often in my childhood. When I’m not behind the computer, you
+            can probably find me on a road trip, working on my pilot’s license,
+            or at one of the many fabulous restaurants here.
           </p>
 
           <p className="text-charcoal text-sm leading-7 max-w-lg">
-            I&apos;m currently a senior software engineer at Dave (a neobanking
+            I’m currently a senior software engineer at Dave (a neobanking
             platform) working on the frontend infrastructure. Most of my days
             consist of tweaking configs, writing handy CLIs, and chasing those
             (always flaky) CI pipeline issues. Outside of my full-time, I also
@@ -33,7 +33,7 @@ const About = ({}) => (
             <Link href="mailto:me@noahbuscher.com" className="underline">
               Drop me a line
             </Link>{" "}
-            if you&apos;re interested!
+            if you’re interested!
           </p>
 
           <p className="text-charcoal text-sm leading-7 max-w-lg">

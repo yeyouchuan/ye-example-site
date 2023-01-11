@@ -27,8 +27,8 @@ const Blog = ({ posts }: any) => {
     <Container>
       <div className="max-w-screen-lg mx-auto flex flex-col mb-8 md:mb-16">
         <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
-          Web developer and designer in Palm Springs. Currently on the infra
-          team at Dave.
+          I’m a web developer and designer based in Palm Springs, currently on
+          the infra team at Dave.
         </h1>
 
         <div className="flex flex-col gap-8 relative flex-grow flex-1">
