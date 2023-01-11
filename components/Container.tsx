@@ -94,7 +94,7 @@ const Container = ({
                       and{" "}
                       <Link
                         className="underline inline"
-                        href="https://github.com/noahbuscher"
+                        href="https://twitter.com/noahbschr"
                       >
                         Twitter
                       </Link>
