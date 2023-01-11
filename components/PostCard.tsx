@@ -13,7 +13,7 @@ export const CATEGORIES: any = {
   Blurb: "Blurb",
 };
 
-type Category = typeof CATEGORIES[keyof typeof CATEGORIES];
+export type Category = typeof CATEGORIES[keyof typeof CATEGORIES];
 
 const getLink = (type: String, slug: string): string => {
   switch (type) {
@@ -22,6 +22,8 @@ const getLink = (type: String, slug: string): string => {
     case "Photo":
       return `/media/${slug}`;
   }
+
+  return "/";
 };
 
 const PostLayout = ({
@@ -46,10 +48,10 @@ const PostLayout = ({
   const router = useRouter();
 
   const contentClasses = classnames(
-    "text-sm rounded-3xl overflow-hidden relative",
+    "text-sm rounded-lg overflow-hidden relative",
     {
       "w-full md:w-3/4 min-h-[160px]": !tile,
-      "aspect-square w-full h-full transition-transform hover:scale-105 cursor-pointer":
+      "aspect-square w-full transition-transform hover:scale-105 cursor-pointer":
         tile,
       "bg-gray-light": category !== CATEGORIES.Post,
       "bg-white border border-gray-light": category === CATEGORIES.Post,

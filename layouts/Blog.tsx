@@ -6,9 +6,10 @@ import classnames from "classnames";
 
 import Container from "../components/Container";
 import FilterBar from "../components/FilterBar";
-import PostLayout, { CATEGORIES } from "../components/PostLayout";
+import PostCard, { CATEGORIES } from "../components/PostCard";
+import { Post } from "../pages";
 
-const getFilteredPosts = (posts: any, filter: any) =>
+const getFilteredPosts = (posts: Post[], filter: any) =>
   filter === ""
     ? posts
     : posts.filter((post: any) => post.data.type === filter);
@@ -18,14 +19,14 @@ const Blog = ({ posts }: any) => {
   const [selectedFilter, setSelectedFilter] = useState("");
 
   const containerClasses = classnames("gap-4", {
-    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4": isGrid,
+    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4": isGrid,
     "flex flex-col": !isGrid,
   });
 
   return (
     <Container>
       <div className="max-w-screen-lg mx-auto flex flex-col min-h-screen">
-        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-24">
+        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
           Web developer and designer, currently developer experience wrangler at
           Dave.
         </h1>
@@ -43,7 +44,7 @@ const Blog = ({ posts }: any) => {
             )}
             <AnimatePresence>
               {getFilteredPosts(posts, selectedFilter).map((post: any) => (
-                <PostLayout
+                <PostCard
                   key={post.data.slug}
                   category={CATEGORIES[post.data.type]}
                   tile={isGrid}
@@ -56,12 +57,13 @@ const Blog = ({ posts }: any) => {
                   {post.data.type === "Photo" && (
                     <img
                       src={post.data.images}
+                      alt={post.data.caption}
                       className="object-cover h-full w-full"
                     />
                   )}
 
                   {post.data.type === "Post" && (
-                    <div className="p-8 relative flex flex-col gap-4">
+                    <div className="p-6 relative flex flex-col gap-4">
                       <h2 className="text-xl text-charcoal flex-1 flex-grow-0">
                         {post.data.title}
                       </h2>
@@ -72,14 +74,14 @@ const Blog = ({ posts }: any) => {
                       {!isGrid && (
                         <Link
                           href={`/posts/${post.data.slug}`}
-                          className="rounded-full transition-all hover:bg-accent hover:border-accent cursor-pointer px-5 py-2 text-charcoal text-xs w-fit ml-auto bg-gray-light"
+                          className="rounded-full transition-all hover:bg-accent hover:border-accent cursor-pointer px-4 py-2 text-charcoal text-xs w-fit ml-auto bg-gray-light"
                         >
                           Read more
                         </Link>
                       )}
                     </div>
                   )}
-                </PostLayout>
+                </PostCard>
               ))}
             </AnimatePresence>
           </div>

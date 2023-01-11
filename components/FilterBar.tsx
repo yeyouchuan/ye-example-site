@@ -3,7 +3,7 @@ import classnames from "classnames";
 
 import GridIcon from "./icons/GridIcon";
 
-import { CATEGORIES } from "./PostLayout";
+import { CATEGORIES } from "./PostCard";
 
 const FilterButton = ({
   children,
@@ -15,7 +15,7 @@ const FilterButton = ({
   selected?: boolean;
 }) => (
   <button
-    className="rounded-full transition-all hover:border-accent cursor-pointer px-5 py-2 text-charcoal text-xs bg-white border border-gray-light"
+    className="rounded-full transition-all hover:border-accent cursor-pointer px-4 py-2 text-charcoal text-xs bg-white border border-gray-light"
     style={{
       boxShadow: selected ? "0px 0px 14px rgba(0, 255, 25, 0.80)" : "",
     }}

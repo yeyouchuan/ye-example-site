@@ -6,11 +6,11 @@ import PageLayout from "../layouts/Page";
 const About = ({}) => (
   <PageLayout>
     <div className="flex flex-col gap-8 mt-32 md:mt-8 mb-24">
-      <img src="/noah.jpg" className="w-full rounded-3xl" />
+      <img src="/noah.jpg" className="w-full rounded-lg" />
 
       <div className="flex flex-col gap-8 max-w-screen-md">
         <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-md max-w-md">
-          Developer, pilot, cowboy.
+          Foo, bar, baz.
         </h1>
 
         <p className="text-charcoal text-xs max-w-md">

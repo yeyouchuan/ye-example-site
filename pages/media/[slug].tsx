@@ -2,17 +2,25 @@ import React from "react";
 
 import { promises as fs } from "fs";
 import path from "path";
-
 // @ts-ignore
 import exif from "exif";
 import matter from "gray-matter";
 
 import PhotoLayout from "../../layouts/Photo";
+import { Post } from "../";
 
+// @todo move to config
 const POSTS_DIR = "_posts";
 const MEDIA_DIR = "public";
 
-const getImageExif = (mediaPath: string) => {
+export type ExifData = {
+  camera?: string;
+  iso?: string;
+  shutterSpeed?: string;
+  aperature?: string;
+};
+
+const getImageExif = (mediaPath: string): Promise<ExifData> => {
   return new Promise((resolve, reject) => {
     new exif.ExifImage({ image: mediaPath }, function (
       error: any,
@@ -55,10 +63,7 @@ export async function getStaticProps({ params }: any) {
   );
 
   const post = posts.find((p) => p?.data?.slug === params.slug);
-
   const mediaPath = path.join(MEDIA_DIR, post?.data?.images);
-
-  console.log("blah");
 
   return {
     props: {
@@ -101,8 +106,7 @@ export async function getStaticPaths() {
   };
 }
 
-const Media = ({ post, exif }: any) => {
-  console.log(exif);
+const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
   return <PhotoLayout exif={exif} post={post} />;
 };
 

@@ -52,7 +52,7 @@ const Sidebar = ({
       {showHomeLink && (
         <Link
           href="/"
-          className="rounded-full transition-all hover:scale-105 hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block"
+          className="rounded-full transition-all hover:scale-105 hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block z-10"
         >
           Return home
         </Link>
