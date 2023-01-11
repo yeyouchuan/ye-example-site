@@ -77,7 +77,7 @@ const Blog = ({ posts }: any) => {
                       {!isGrid && (
                         <Link
                           href={`/posts/${post.data.slug}`}
-                          className="rounded-full transition-all hover:bg-amber-400 hover:border-accent cursor-pointer px-4 py-2 text-white text-xs w-fit ml-auto bg-amber-500"
+                          className="rounded-full transition-all ease-in-out hover:bg-amber-400 ease-in-out hover:border-accent cursor-pointer px-4 py-2 text-white text-xs w-fit ml-auto bg-amber-500"
                         >
                           Read more
                         </Link>

@@ -51,7 +51,7 @@ const PostLayout = ({
     "text-sm rounded-lg overflow-hidden relative",
     {
       "w-full lg:w-3/4": !tile,
-      "aspect-square w-full transition-transform hover:scale-105 cursor-pointer":
+      "aspect-square w-full transition-transform ease-in-out hover:scale-105 ease-in-out hover:rotate-1 cursor-pointer flex items-center justify-center":
         tile,
       "bg-gray-light": category !== CATEGORIES.Post,
       "bg-amber-50 border-amber-200 border": category === CATEGORIES.Post,

@@ -17,7 +17,7 @@ const FilterButton = ({
   selected?: boolean;
 }) => (
   <button
-    className="rounded-full transition-all hover:border-accent cursor-pointer px-4 py-2 text-charcoal text-xs bg-white border border-gray-light"
+    className="rounded-full transition-all ease-in-out hover:border-accent cursor-pointer px-4 py-2 text-charcoal text-xs bg-white border border-gray-light"
     style={{
       boxShadow: selected ? "0px 0px 8px rgba(0, 255, 25, 0.60)" : "",
     }}

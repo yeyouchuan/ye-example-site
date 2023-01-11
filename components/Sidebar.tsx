@@ -40,7 +40,7 @@ const Sidebar = ({
             Currently available for freelance.
             <Link
               href="mailto:me@noahbuscher.com"
-              className="rounded-full w-full px-1 py-2 text-charcoal bg-white transition-all hover:bg-accent text-center"
+              className="rounded-full w-full px-1 py-2 text-charcoal bg-white transition-all ease-in-out hover:bg-accent text-center"
             >
               Email me
             </Link>
@@ -52,7 +52,7 @@ const Sidebar = ({
       {showHomeLink && (
         <Link
           href="/"
-          className="rounded-full transition-all hover:scale-105 hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block z-10"
+          className="rounded-full transition-all ease-in-out hover:scale-105 ease-in-out hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block z-10"
         >
           Return home
         </Link>
