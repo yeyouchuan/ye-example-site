@@ -87,7 +87,7 @@ const Post = ({
   return (
     <>
       <Head>
-        <title>Noah Buscher - {post.data.title}</title>
+        <title>{`Noah Buscher - ${post.data.title}`}</title>
         <meta
           property="og:title"
           content={`Noah Buscher - ${post.data.title}`}
