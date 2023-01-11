@@ -93,7 +93,7 @@ const Container = ({
               <div className="flex-1 flex-grow bg-[#F4F4F4] text-charcoal px-8 py-8">
                 <div className="max-w-screen-lg mx-auto">
                   <div className="mx-auto max-w-screen-lg flex flex-col gap-2">
-                    <p className="text-xs text-gray">
+                    <p className="text-xs text-gray-dark">
                       Find me on{" "}
                       <Link
                         className="underline inline"
@@ -109,7 +109,9 @@ const Container = ({
                         Twitter
                       </Link>
                     </p>
-                    <p className="text-xs text-gray">Updated January 2023</p>
+                    <p className="text-xs text-gray-dark">
+                      Updated January 2023
+                    </p>
                   </div>
                 </div>
               </div>
