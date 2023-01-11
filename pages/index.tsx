@@ -1,5 +1,5 @@
 import React from "react";
-
+import Head from "next/head";
 import { promises as fs } from "fs";
 import path from "path";
 import dayjs from "dayjs";
@@ -59,5 +59,14 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }: { posts: Post[] }) {
-  return <BlogLayout posts={posts} />;
+  return (
+    <>
+      <Head>
+        <title>Noah Buscher - Developer</title>
+        <meta property="og:title" content="Noah Buscher - Developer" />
+        <meta name="twitter:title" content="Noah Buscher - Developer" />
+      </Head>
+      <BlogLayout posts={posts} />
+    </>
+  );
 }

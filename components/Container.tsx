@@ -21,8 +21,12 @@ const Container = ({
 }) => {
   const meta = {
     title: "Noah Buscher - Developer",
+    url: "https://noahbuscher.com",
+    themeColor: "#FBFBFB",
+    twitterHandle: "@noahbschr",
+    author: "Noah Buscher",
+    socialImage: "https://noahbuscher.com/social-image.jpg",
     description: "Web developer and designer based in Palm Springs, CA.",
-    image: "tbd",
   };
 
   const contentClassnames = classnames(
@@ -35,13 +39,19 @@ const Container = ({
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
-        <meta
-          name="description"
-          content="Noah Buscher is a web developer and designer, currently at Dave and available for freelance work."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content={meta.author} />
+        <meta property="og:url" content={meta.url} />
+        <meta name="description" content={meta.description} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="image" content={meta.socialImage} />
+        <meta property="og:image" content={meta.socialImage} />
+        <meta name="twitter:image" content={meta.socialImage} />
+        <meta name="twitter:site" content={meta.twitterHandle} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="theme-color" content={meta.themeColor} />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
         <Sidebar avatar="/me.jpg" showHomeLink={showHomeLink}>

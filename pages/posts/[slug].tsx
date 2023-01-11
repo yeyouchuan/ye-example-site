@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -83,7 +84,22 @@ const Post = ({
   post: Post;
   renderedPostContent: string;
 }) => {
-  return <PostLayout post={post} renderedPostContent={renderedPostContent} />;
+  return (
+    <>
+      <Head>
+        <title>Noah Buscher - {post.data.title}</title>
+        <meta
+          property="og:title"
+          content={`Noah Buscher - ${post.data.title}`}
+        />
+        <meta
+          name="twitter:title"
+          content={`Noah Buscher - ${post.data.title}`}
+        />
+      </Head>
+      <PostLayout post={post} renderedPostContent={renderedPostContent} />
+    </>
+  );
 };
 
 export default Post;

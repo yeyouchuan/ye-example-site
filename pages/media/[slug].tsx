@@ -1,5 +1,5 @@
 import React from "react";
-
+import Head from "next/head";
 import { promises as fs } from "fs";
 import path from "path";
 // @ts-ignore
@@ -107,7 +107,22 @@ export async function getStaticPaths() {
 }
 
 const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
-  return <PhotoLayout exif={exif} post={post} />;
+  return (
+    <>
+      <Head>
+        <title>Noah Buscher - {post.data.title}</title>
+        <meta
+          property="og:title"
+          content={`Noah Buscher - ${post.data.title}`}
+        />
+        <meta
+          name="twitter:title"
+          content={`Noah Buscher - ${post.data.title}`}
+        />
+      </Head>
+      <PhotoLayout exif={exif} post={post} />
+    </>
+  );
 };
 
 export default Media;
