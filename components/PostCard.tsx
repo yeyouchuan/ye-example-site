@@ -48,13 +48,13 @@ const PostLayout = ({
   const router = useRouter();
 
   const contentClasses = classnames(
-    "text-sm rounded-lg overflow-hidden relative",
+    "text-sm rounded-md overflow-hidden relative",
     {
       "w-full lg:w-3/4": !tile,
       "aspect-square w-full transition-transform ease-in-out hover:scale-105 ease-in-out hover:rotate-1 cursor-pointer flex items-center justify-center":
         tile,
       "bg-gray-light": category !== CATEGORIES.Post,
-      "bg-amber-50 border-amber-200 border": category === CATEGORIES.Post,
+      "bg-[#FFF1D6] border border-[#E9CD94]": category === CATEGORIES.Post,
     }
   );
 

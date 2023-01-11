@@ -36,7 +36,7 @@ const Sidebar = ({
         </Link>
         {children}
         <div className="absolute bottom-12 left-8 right-8 flex flex-col gap-8 text-xs">
-          <div className="bg-gray-light rounded-2xl p-4 w-full flex flex-col gap-6">
+          <div className="bg-gray-light rounded-md p-4 w-full flex flex-col gap-6">
             Currently available for freelance.
             <Link
               href="mailto:me@noahbuscher.com"

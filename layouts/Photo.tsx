@@ -11,9 +11,9 @@ const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
         <div className="relative">
           <img
             src={post.data.images}
-            className="rounded-lg max-w-screen-lg mx-auto w-full"
+            className="rounded-md max-w-screen-lg mx-auto w-full"
           />
-          <div className="hidden md:block rounded-lg bg-white/60 backdrop-blur-sm p-4 text-xs absolute left-4 bottom-4 max-w-xs text-left">
+          <div className="hidden md:block rounded-md bg-white/60 backdrop-blur-sm p-4 text-xs absolute left-4 bottom-4 max-w-xs text-left">
             {post.data.caption}
           </div>
         </div>

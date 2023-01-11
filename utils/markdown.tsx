@@ -4,7 +4,7 @@ import * as ReactDOMServer from "react-dom/server";
 import ReactMarkdown from "react-markdown";
 
 const Img = ({ ...props }: any) => (
-  <img className="rounded-lg max-w-screen-lg mx-auto w-full" {...props} />
+  <img className="rounded-md max-w-screen-lg mx-auto w-full" {...props} />
 );
 
 const Text = ({ children, node }: any) => {

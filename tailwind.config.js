@@ -22,6 +22,7 @@ module.exports = {
           "system-ui",
           "sans-serif",
         ],
+        serif: ['"Tobias"'],
       },
       animation: {
         bounce: "bounce 1s 1.5",

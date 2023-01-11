@@ -26,7 +26,7 @@ const PostLayout = ({
   return (
     <Container showHomeLink>
       <article className="max-w-screen-lg mx-auto relative min-h-screen mb-24">
-        <h1 className="p-0 m-0 text-charcoal text-[1.953rem] leading-tight mt-32 mb-8 max-w-lg mx-auto text-center">
+        <h1 className="font-serif p-0 m-0 text-charcoal text-[1.953rem] leading-tight mt-32 mb-8 max-w-lg mx-auto text-center">
           {post.data.title}
         </h1>
         <div className="flex flex-row gap-8 text-xs mb-16 text-center max-w-screen-md mx-auto">

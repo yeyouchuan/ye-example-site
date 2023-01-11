@@ -26,7 +26,7 @@ const Blog = ({ posts }: any) => {
   return (
     <Container>
       <div className="max-w-screen-lg mx-auto flex flex-col mb-8 md:mb-16">
-        <h1 className="flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
+        <h1 className="font-serif flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
           I’m a web developer and designer based in Palm Springs, currently on
           the infra team at Dave.
         </h1>
@@ -67,7 +67,7 @@ const Blog = ({ posts }: any) => {
 
                   {post.data.type === "Post" && (
                     <div className="p-4 relative flex flex-col gap-4">
-                      <h2 className="flex-1 flex-grow-0 text-lg text-charcoal flex-1 flex-grow-0">
+                      <h2 className="flex-1 flex-grow-0 text-lg text-charcoal flex-1 flex-grow-0 font-serif">
                         {post.data.title}
                       </h2>
                       <p className="flex-1 flex-grow text-xs text-ellipsis flex-1 flex-grow">
@@ -77,7 +77,7 @@ const Blog = ({ posts }: any) => {
                       {!isGrid && (
                         <Link
                           href={`/posts/${post.data.slug}`}
-                          className="rounded-full transition-all ease-in-out hover:bg-amber-400 ease-in-out hover:border-accent cursor-pointer px-4 py-2 text-white text-xs w-fit ml-auto bg-amber-500"
+                          className="underline text-charcoal text-xs w-fit ml-auto"
                         >
                           Read more
                         </Link>

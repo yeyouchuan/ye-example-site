@@ -8,6 +8,12 @@
   src: url("/fonts/ABCMonumentGrotesk-Regular.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: Tobias;
+  font-weight: 400;
+  src: url("/fonts/Tobias-RegularItalic.woff2") format("woff2");
+}
+
 ::selection {
   background: #00ff19;
 }
