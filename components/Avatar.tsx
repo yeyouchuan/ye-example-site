@@ -19,7 +19,7 @@ const Avatar = ({
   });
 
   const activeClassnames = classnames(
-    "bg-accent rounded-full border-white absolute",
+    "bg-accent rounded-md border-white absolute",
     {
       "w-3 h-3 top-[2px] right-[2px] border-[2px]": !small,
       "w-2 h-2 top-[1px] right-[1px] border-[1px]": small,

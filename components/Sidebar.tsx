@@ -36,11 +36,11 @@ const Sidebar = ({
         </Link>
         {children}
         <div className="absolute bottom-12 left-8 right-8 flex flex-col gap-8 text-xs">
-          <div className="bg-gray-light rounded-md p-4 w-full flex flex-col gap-6">
+          <div className="bg-gray-light rounded-md p-4 w-full flex flex-col gap-6 text-gray-dark">
             Currently available for freelance.
             <Link
               href="mailto:me@noahbuscher.com"
-              className="rounded-full w-full px-1 py-2 text-charcoal bg-white transition-all ease-in-out hover:bg-accent text-center"
+              className="rounded-md w-full px-2 py-1.5 text-charcoal bg-white transition-all ease-in-out hover:bg-accent text-center"
             >
               Email me
             </Link>
@@ -52,7 +52,7 @@ const Sidebar = ({
       {showHomeLink && (
         <Link
           href="/"
-          className="rounded-full transition-all ease-in-out hover:scale-105 ease-in-out hover:border-accent cursor-pointer px-5 py-2 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block z-10"
+          className="rounded-md transition-all ease-in-out hover:scale-105 ease-in-out hover:border-accent cursor-pointer px-2 py-1.5 text-white text-xs bg-[#282828] block w-fit fixed right-8 top-10 hidden md:block z-10"
         >
           Return home
         </Link>

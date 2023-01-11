@@ -17,7 +17,7 @@ const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
             {post.data.caption}
           </div>
         </div>
-        <div className="w-screen-md md:bg-gray-light md:px-8 px-4 py-2 rounded-full">
+        <div className="w-screen-md md:bg-gray-light md:px-8 px-4 py-2 rounded-md">
           <div className="flex flex-row gap-8">
             <div>
               <small className="text-gray">Shutter speed</small>
