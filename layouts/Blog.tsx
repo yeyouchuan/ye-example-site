@@ -29,7 +29,12 @@ const Blog = ({ posts }: any) => {
         <h1 className="font-serif flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
           I’m a web developer and designer based in Palm Springs, currently on
           the infra team at{" "}
-          <Link href="https://dave.com" className="border-b border-charcoal">
+          <Link
+            href="https://dave.com"
+            target="_blank"
+            rel="noreferrer"
+            className="border-b border-charcoal"
+          >
             Dave*
           </Link>
           .
