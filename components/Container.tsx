@@ -64,16 +64,16 @@ const Container = ({
           <h3 className="p-0 m-0 text-charcoal text-xs">Senior SWE, Dave</h3>
           <Link
             href="/about"
-            className="p-0 m-0 text-charcoal text-xs underline"
+            className="p-0 m-0 text-charcoal text-xs border-b border-charcoal w-fit"
           >
             More about me
           </Link>
         </Sidebar>
         <div className="min-h-screen flex flex-col">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
             transition={{
               type: "ease-in-out",
             }}
@@ -89,11 +89,24 @@ const Container = ({
                 className="w-[120px] md:w-[200px] h-auto ml-auto"
               />
             </div>
-            <div className="flex-1 flex flex-grow ml-0 md:ml-[300px] xl:ml-[375px]">
+            <div className="flex-1 flex flex-grow ml-0 md:ml-[340px]">
               <div className="flex-1 flex-grow bg-[#F4F4F4] text-charcoal px-8 py-8">
                 <div className="max-w-screen-lg mx-auto">
+                  <div className="max-w-md my-12 md:my-24 flex flex-col gap-4">
+                    <h1 className="font-serif p-0 m-0 text-gray-dark text-xl">
+                      Have a project idea and want to work with me? I’d love to
+                      hear from you.
+                    </h1>
+                    <Link
+                      href="mailto:me@noahbuscher.com"
+                      className="text-xs text-gray-dark border-b border-gray-dark w-fit"
+                    >
+                      Get in touch
+                    </Link>
+                  </div>
+
                   <div className="mx-auto max-w-screen-lg flex flex-col gap-2">
-                    <p className="text-xs text-gray-dark">
+                    <p className="text-xs text-gray">
                       Find me on{" "}
                       <Link
                         className="underline inline"
@@ -109,9 +122,7 @@ const Container = ({
                         Twitter
                       </Link>
                     </p>
-                    <p className="text-xs text-gray-dark">
-                      Updated January 2023
-                    </p>
+                    <p className="text-xs text-gray">Updated January 2023</p>
                   </div>
                 </div>
               </div>

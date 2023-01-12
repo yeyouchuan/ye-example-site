@@ -26,7 +26,7 @@ const Sidebar = ({
 
   return (
     <div>
-      <div className="px-8 py-12 border-r flex-col gap-6 text-sm border-r border-gray-light w-[300px] xl:w-[375px] fixed top-0 left-0 bottom-0 hidden md:flex">
+      <div className="px-8 py-8 border-r flex-col gap-6 text-sm border-r border-gray-light w-[340px] fixed top-0 left-0 bottom-0 hidden md:flex">
         <Link href="/">
           <Avatar
             image={avatar}
@@ -45,7 +45,13 @@ const Sidebar = ({
               Email me
             </Link>
           </div>
-          &copy; {new Date().getFullYear()}
+          <div className="flex flex-row gap-2 items-center">
+            <div className="flex-1">&copy; {new Date().getFullYear()}</div>
+            <img
+              src="/connectedness.svg"
+              className="flex-1 h-4 w-auto flex-grow-0"
+            />
+          </div>
         </div>
       </div>
 

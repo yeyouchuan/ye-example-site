@@ -87,7 +87,7 @@ const Blog = ({ posts }: any) => {
                       {!isGrid && (
                         <Link
                           href={`/posts/${post.data.slug}`}
-                          className="underline text-charcoal text-xs w-fit ml-auto"
+                          className="border-b border-charcoal text-charcoal text-xs w-fit ml-auto"
                         >
                           Read more
                         </Link>
