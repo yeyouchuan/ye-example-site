@@ -109,14 +109,14 @@ const Container = ({
                     <p className="text-xs text-gray">
                       Find me on{" "}
                       <Link
-                        className="underline inline"
+                        className="border-b border-gray inline"
                         href="https://github.com/noahbuscher"
                       >
                         GitHub
                       </Link>{" "}
                       and{" "}
                       <Link
-                        className="underline inline"
+                        className="border-b border-gray inline"
                         href="https://twitter.com/noahbschr"
                       >
                         Twitter
