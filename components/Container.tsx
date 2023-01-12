@@ -30,7 +30,7 @@ const Container = ({
   };
 
   const contentClassnames = classnames(
-    "ml-0 md:ml-[300px] xl:ml-[375px] px-8 relative flex-1 flex-grow-0",
+    "ml-0 md:ml-[340px] px-8 relative flex-1 flex-grow-0",
     {
       "bg-charcoal": dark,
     }
