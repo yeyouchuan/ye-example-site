@@ -13,7 +13,11 @@ const About = ({}) => (
     </Head>
     <PageLayout>
       <div className="flex flex-col gap-8 mt-32 md:mt-14 mb-24">
-        <img src="/noah-about.jpeg" className="w-full rounded-md" />
+        <img
+          src="/noah-about.jpeg"
+          alt="A landscape portrait of Noah in a windbreaker with a white background"
+          className="w-full rounded-md"
+        />
 
         <div className="flex flex-col gap-8 max-w-screen-md">
           <p className="text-charcoal text-sm leading-7 max-w-lg">

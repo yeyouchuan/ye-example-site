@@ -62,6 +62,7 @@ const FilterBar = ({
       <div>
         <button
           className="text-xs w-fit ml-auto flex-grow-0"
+          aria-label="Toggle grid"
           onClick={onLayoutToggle}
         >
           <AnimatePresence>

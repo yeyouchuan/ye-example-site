@@ -49,6 +49,7 @@ const Sidebar = ({
             <div className="flex-1">&copy; {new Date().getFullYear()}</div>
             <img
               src="/connectedness.svg"
+              alt="Two interlocking circles"
               className="flex-1 h-4 w-auto flex-grow-0"
             />
           </div>

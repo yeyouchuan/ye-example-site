@@ -5,10 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import classnames from "classnames";
 
-import Avatar from "./Avatar";
 import Sidebar from "./Sidebar";
-
-import { isNowWithinTime } from "../utils/time";
 
 const Container = ({
   children,
@@ -86,6 +83,7 @@ const Container = ({
             <div className="flex-1 flex-grow-0 ml-auto pr-8">
               <img
                 src="/trees.svg"
+                alt="Silhouette of four Joshua Trees"
                 className="w-[120px] md:w-[200px] h-auto ml-auto"
               />
             </div>
