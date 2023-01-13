@@ -35,7 +35,7 @@ const Blog = ({ posts }: any) => {
             rel="noreferrer"
             className="border-b border-charcoal"
           >
-            Dave*
+            Dave
           </Link>
           .
         </h1>
