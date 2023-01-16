@@ -21,6 +21,8 @@ const getLink = (type: String, slug: string): string => {
       return `/posts/${slug}`;
     case "Photo":
       return `/media/${slug}`;
+    case "Work":
+      return `/work/${slug}`;
   }
 
   return "/";

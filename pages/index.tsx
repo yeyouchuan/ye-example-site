@@ -21,6 +21,8 @@ export type Post = {
     slug: string;
     title?: string;
     type?: Category;
+    skills?: string;
+    link?: string;
   };
 };
 
