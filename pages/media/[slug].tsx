@@ -23,7 +23,7 @@ export type ExifData = {
 const getImageExif = (mediaPath: string): Promise<ExifData> => {
   return new Promise((resolve, reject) => {
     new exif.ExifImage({ image: mediaPath }, function (
-      error: any,
+      error: Error,
       exifData: any
     ) {
       if (error) reject(error.message);
@@ -41,7 +41,7 @@ const getImageExif = (mediaPath: string): Promise<ExifData> => {
   });
 };
 
-export async function getStaticProps({ params }: any) {
+export async function getStaticProps({ params }: { params: { slug: string } }) {
   const postsDir = path.join(process.cwd(), POSTS_DIR);
   const files = await fs.readdir(postsDir);
 

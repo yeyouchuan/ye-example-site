@@ -7,7 +7,7 @@ import FolderIcon from "./icons/FolderIcon";
 import CalendarIcon from "./icons/CalendarIcon";
 import LocationIcon from "./icons/LocationIcon";
 
-export const CATEGORIES: any = {
+export const CATEGORIES: { [type: string]: string } = {
   Post: "Post",
   Work: "Work",
   Photo: "Photo",

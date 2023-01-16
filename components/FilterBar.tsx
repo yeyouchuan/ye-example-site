@@ -13,7 +13,7 @@ const FilterButton = ({
   selected = false,
 }: {
   children: React.ReactNode;
-  onClick: any;
+  onClick: () => void;
   selected?: boolean;
 }) => (
   <button
@@ -34,8 +34,8 @@ const FilterBar = ({
   selectedFilter = "",
   isGrid = false,
 }: {
-  onLayoutToggle: any;
-  onSelectFilter: any;
+  onLayoutToggle: () => void;
+  onSelectFilter: (filter: string) => void;
   selectedFilter: string;
   isGrid?: boolean;
 }) => {

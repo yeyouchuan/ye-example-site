@@ -11,7 +11,7 @@ import { Post } from "../";
 // @todo move to config
 const POSTS_DIR = "_posts";
 
-export async function getStaticProps({ params }: any) {
+export async function getStaticProps({ params }: { params: { slug: string } }) {
   const postsDir = path.join(process.cwd(), POSTS_DIR);
   const files = await fs.readdir(postsDir);
 

@@ -7,7 +7,7 @@ const Img = ({ ...props }: any) => (
   <img className="rounded-md max-w-screen-lg mx-auto w-full" {...props} />
 );
 
-const Text = ({ children, node }: any) => {
+const Text = ({ children, node }: { children: React.ReactNode; node: any }) => {
   if (node.children[0].tagName === "img") {
     const image: any = node.children[0];
 
