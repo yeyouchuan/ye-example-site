@@ -31,21 +31,21 @@ const PostLayout = ({
         </h1>
         <div className="flex flex-row gap-8 text-xs mb-16 text-center max-w-screen-md mx-auto">
           {post?.data?.date && (
-            <div className="flex-1">
+            <div className="flex-1  hidden md:block">
               <small className="text-gray">Publish date</small>
               <p>{post.data.date}</p>
             </div>
           )}
 
           {post?.data?.skills && (
-            <div className="flex-1 hidden md:block">
+            <div className="flex-1">
               <small className="text-gray">Skills</small>
               <p>{post.data.skills}</p>
             </div>
           )}
 
           {post?.data?.link && (
-            <div className="flex-1 hidden md:block">
+            <div className="flex-1">
               <small className="text-gray">Link</small>
               <Link
                 href={post.data.link}
