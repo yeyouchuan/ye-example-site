@@ -20,7 +20,6 @@ const Container = ({
     title: "Noah Buscher - Developer",
     url: "https://noahbuscher.com",
     themeColor: "#FBFBFB",
-    twitterHandle: "@noahbschr",
     author: "Noah Buscher",
     socialImage: "https://noahbuscher.com/social-image.jpg",
     description: "Web developer and designer based in Palm Springs, CA.",
@@ -43,7 +42,6 @@ const Container = ({
         <meta name="image" content={meta.socialImage} />
         <meta property="og:image" content={meta.socialImage} />
         <meta name="twitter:image" content={meta.socialImage} />
-        <meta name="twitter:site" content={meta.twitterHandle} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content={meta.themeColor} />
@@ -113,7 +111,7 @@ const Container = ({
                         GitHub
                       </Link>
                     </p>
-                    <p className="text-xs text-gray">Updated January 2023</p>
+                    <p className="text-xs text-gray">Updated March 2023</p>
                   </div>
                 </div>
               </div>
