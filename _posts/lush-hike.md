@@ -1,6 +1,6 @@
 ---
-slug: desert-walk
-title: Desert Walk
+slug: lush-hike
+title: Lush Hike
 date: February 26, 2023
 author: Noah Buscher
 location: Palm Springs, CA
