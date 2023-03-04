@@ -111,13 +111,6 @@ const Container = ({
                         href="https://github.com/noahbuscher"
                       >
                         GitHub
-                      </Link>{" "}
-                      and{" "}
-                      <Link
-                        className="border-b border-gray inline"
-                        href="https://twitter.com/noahbschr"
-                      >
-                        Twitter
                       </Link>
                     </p>
                     <p className="text-xs text-gray">Updated January 2023</p>
