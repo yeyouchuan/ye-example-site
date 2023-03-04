@@ -51,7 +51,7 @@ const Container = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
-        <Sidebar avatar="/me.jpg" showHomeLink={showHomeLink}>
+        <Sidebar avatar="/me.jpeg" showHomeLink={showHomeLink}>
           <div>
             <h3 className="p-0 m-0 text-charcoal text-xs">Noah Buscher</h3>
             <p className="p-0 m-0 text-charcoal text-xs">
