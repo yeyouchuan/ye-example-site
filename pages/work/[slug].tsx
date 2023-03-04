@@ -96,6 +96,21 @@ const Post = ({
           name="twitter:title"
           content={`Noah Buscher - ${post.data.title}`}
         />
+        <meta
+          name="description"
+          content={post.data.caption}
+          key="description"
+        />
+        <meta
+          name="og:description"
+          content={post.data.caption}
+          key="og-description"
+        />
+        <meta
+          name="twitter:description"
+          content={post.data.caption}
+          key="twitter-description"
+        />
       </Head>
       <CaseStudyLayout post={post} renderedPostContent={renderedPostContent} />
     </>

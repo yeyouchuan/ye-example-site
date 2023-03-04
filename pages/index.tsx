@@ -14,6 +14,7 @@ export type Post = {
   content: string;
   data: {
     author: string;
+    excerpt?: string;
     caption?: string;
     date: string;
     images?: string;
@@ -64,9 +65,17 @@ export default function Home({ posts }: { posts: Post[] }) {
   return (
     <>
       <Head>
-        <title>Noah Buscher - Developer</title>
-        <meta property="og:title" content="Noah Buscher - Developer" />
-        <meta name="twitter:title" content="Noah Buscher - Developer" />
+        <title key="title">Noah Buscher - Developer</title>
+        <meta
+          property="og:title"
+          content="Noah Buscher - Developer"
+          key="og-title"
+        />
+        <meta
+          name="twitter:title"
+          content="Noah Buscher - Developer"
+          key="twitter-title"
+        />
       </Head>
       <BlogLayout posts={posts} />
     </>

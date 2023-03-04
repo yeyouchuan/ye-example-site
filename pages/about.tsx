@@ -7,9 +7,13 @@ import PageLayout from "../layouts/Page";
 const About = ({}) => (
   <>
     <Head>
-      <title>Noah Buscher - About</title>
-      <meta property="og:title" content="Noah Buscher - About" />
-      <meta name="twitter:title" content="Noah Buscher - About" />
+      <title key="title">Noah Buscher - About</title>
+      <meta property="og:title" content="Noah Buscher - About" key="og-title" />
+      <meta
+        name="twitter:title"
+        content="Noah Buscher - About"
+        key="twitter-title"
+      />
     </Head>
     <PageLayout>
       <div className="flex flex-col gap-8 mt-32 md:mt-14 mb-24">

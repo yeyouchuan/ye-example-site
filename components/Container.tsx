@@ -16,15 +16,6 @@ const Container = ({
   dark?: boolean;
   showHomeLink?: boolean;
 }) => {
-  const meta = {
-    title: "Noah Buscher - Developer",
-    url: "https://noahbuscher.com",
-    themeColor: "#FBFBFB",
-    author: "Noah Buscher",
-    socialImage: "https://noahbuscher.com/social-image.jpg",
-    description: "Web developer and designer based in Palm Springs, CA.",
-  };
-
   const contentClassnames = classnames(
     "ml-0 md:ml-[340px] px-8 relative flex-1 flex-grow-0",
     {
@@ -34,20 +25,6 @@ const Container = ({
 
   return (
     <div>
-      <Head>
-        <meta name="author" content={meta.author} />
-        <meta property="og:url" content={meta.url} />
-        <meta name="description" content={meta.description} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="image" content={meta.socialImage} />
-        <meta property="og:image" content={meta.socialImage} />
-        <meta name="twitter:image" content={meta.socialImage} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta name="theme-color" content={meta.themeColor} />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <div>
         <Sidebar avatar="/me.jpeg" showHomeLink={showHomeLink}>
           <div>

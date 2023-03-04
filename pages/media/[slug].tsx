@@ -110,14 +110,31 @@ const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
   return (
     <>
       <Head>
-        <title>{`Noah Buscher - ${post.data.title}`}</title>
+        <title key="title">{`Noah Buscher - ${post.data.title}`}</title>
         <meta
           property="og:title"
           content={`Noah Buscher - ${post.data.title}`}
+          key="og-title"
         />
         <meta
           name="twitter:title"
           content={`Noah Buscher - ${post.data.title}`}
+          key="twitter-title"
+        />
+        <meta
+          name="description"
+          content={post.data.caption}
+          key="description"
+        />
+        <meta
+          name="og:description"
+          content={post.data.caption}
+          key="og-description"
+        />
+        <meta
+          name="twitter:description"
+          content={post.data.caption}
+          key="twitter-description"
         />
       </Head>
       <PhotoLayout exif={exif} post={post} />
