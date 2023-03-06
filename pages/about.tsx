@@ -39,29 +39,69 @@ const About = ({}) => {
 
           <div className="flex flex-col gap-8 max-w-screen-md">
             <p className="text-charcoal text-sm leading-7 max-w-lg">
-              I am a web developer and designer currently working remotely from
-              Palm Springs, California. I grew up in rural Iowa, but moved
-              around quite often in my childhood. When I’m not behind the
-              computer, you can probably find me on a road trip, working on my
-              pilot’s license, or at one of the many fabulous restaurants here.
+              Hey, I’m Noah. I’m currently a senior software engineer on the
+              front end infrastructure team at{" "}
+              <Link
+                href="https://dave.com"
+                target="_blank"
+                rel="noreferrer"
+                className="border-b border-charcoal inline"
+              >
+                Dave
+              </Link>
+              . There, I focus on building dev tools, creating CI/CD pipelines,
+              mainting our component library, and more. I work remove from
+              (beautiful) Palm Springs, CA. After the workday, you can likely
+              find me on the{" "}
+              <Link
+                href="/media/lush-hike"
+                target="_blank"
+                rel="noreferrer"
+                className="border-b border-charcoal inline"
+              >
+                trails
+              </Link>
+              , in the air working on my pilot’s license, or trying one of the
+              many fabulous restaurants here.
             </p>
-
             <p className="text-charcoal text-sm leading-7 max-w-lg">
-              I’m currently a senior software engineer at Dave (a neobanking
-              platform) working on the frontend infrastructure. Most of my days
-              consist of tweaking configs, writing handy CLIs, and chasing those
-              (always flaky) CI pipeline issues. Outside of my full-time, I also
-              take on a few freelance projects a year.{" "}
-              <Link href="mailto:me@noahbuscher.com" className="underline">
-                Drop me a line
-              </Link>{" "}
-              if you’re interested!
+              Outside of my full time, I occasionally take on freelance work. If
+              you’re looking for someone to work with to design and/or develop
+              your web app or website, feel free to{" "}
+              <Link
+                href="mailto:me@noahbuscher.com"
+                target="_blank"
+                rel="noreferrer"
+                className="border-b border-charcoal inline"
+              >
+                drop me a line
+              </Link>
+              .
             </p>
-
+            <p className="text-charcoal text-sm leading-7 max-w-lg">
+              Other than this site, you can find me on{" "}
+              <Link
+                className="border-b border-charcoal inline"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/noahbuscher"
+              >
+                GitHub
+              </Link>{" "}
+              and{" "}
+              <Link
+                className="border-b border-charcoal inline"
+                target="_blank"
+                rel="noreferrer"
+                href="https://read.cv/noahbuscher"
+              >
+                read.cv
+              </Link>
+              .
+            </p>
             <p className="text-charcoal text-sm leading-7 max-w-lg">
               Experience:
             </p>
-
             <p className="text-charcoal text-sm leading-7 max-w-lg">
               Dave
               <br />
@@ -69,7 +109,6 @@ const About = ({}) => {
               <br />
               2022 - Present
             </p>
-
             <p className="text-charcoal text-sm leading-7 max-w-lg">
               Vic.ai
               <br />
@@ -77,7 +116,6 @@ const About = ({}) => {
               <br />
               2021 - 2022
             </p>
-
             <p className="text-charcoal text-sm leading-7 max-w-lg">
               Ping Identity
               <br />
