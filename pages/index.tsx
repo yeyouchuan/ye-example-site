@@ -63,7 +63,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts }: { posts: Post[] }) {
   const meta = {
-    title: "Noah Buscher - Developer",
+    title: "Noah Buscher - Web Developer in Palm Springs",
     description: "Web developer and designer based in Palm Springs, CA.",
   };
 
