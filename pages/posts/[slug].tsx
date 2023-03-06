@@ -87,15 +87,15 @@ const Post = ({
   return (
     <>
       <Head>
-        <title key="title">{`Noah Buscher - ${post.data.title}`}</title>
+        <title key="title">{`${post.data.title} - Noah Buscher`}</title>
         <meta
           property="og:title"
-          content={`Noah Buscher - ${post.data.title}`}
+          content={`${post.data.title} - Noah Buscher`}
           key="og-title"
         />
         <meta
           name="twitter:title"
-          content={`Noah Buscher - ${post.data.title}`}
+          content={`${post.data.title} - Noah Buscher`}
           key="twitter-title"
         />
         <meta

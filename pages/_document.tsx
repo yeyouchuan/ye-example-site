@@ -2,7 +2,6 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   const meta = {
-    title: "Noah Buscher - Developer",
     url: "https://noahbuscher.com",
     themeColor: "#FBFBFB",
     author: "Noah Buscher",
@@ -13,13 +12,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title key="title">{meta.description}</title>
-        <meta property="og:title" content={meta.description} key="og-title" />
-        <meta
-          name="twitter:title"
-          content={meta.description}
-          key="twitter-title"
-        />
         <meta name="author" content={meta.author} key="author" />
         <meta property="og:url" content={meta.url} key="og-url" />
         <meta name="description" content={meta.description} key="description" />
