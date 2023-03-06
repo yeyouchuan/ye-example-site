@@ -87,33 +87,23 @@ const Post = ({
   return (
     <>
       <Head>
-        <title key="title">{`${post.data.title} - Noah Buscher`}</title>
+        <title>{`${post.data.title} | Noah Buscher`}</title>
+        <meta name="description" content={post.data.excerpt} />
         <meta
           property="og:title"
-          content={`${post.data.title} - Noah Buscher`}
-          key="og-title"
+          content={`${post.data.title} | Noah Buscher`}
+        />
+        <meta property="og:description" content={post.data.excerpt} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content={`https://noahbuscher.com/posts/${post.data.slug}`}
         />
         <meta
           name="twitter:title"
-          content={`${post.data.title} - Noah Buscher`}
-          key="twitter-title"
+          content={`${post.data.title} | Noah Buscher`}
         />
-        <meta
-          name="description"
-          content={post.data.excerpt}
-          key="description"
-        />
-        <meta
-          name="og:description"
-          content={post.data.excerpt}
-          key="og-description"
-        />
-        <meta
-          name="twitter:description"
-          content={post.data.excerpt}
-          key="twitter-description"
-        />
-        <meta name="author" content="Noah Buscher" key="author" />
+        <meta name="twitter:description" content={post.data.excerpt} />
       </Head>
       <PostLayout post={post} renderedPostContent={renderedPostContent} />
     </>

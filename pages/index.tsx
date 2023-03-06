@@ -63,27 +63,22 @@ export async function getStaticProps() {
 
 export default function Home({ posts }: { posts: Post[] }) {
   const meta = {
-    title: "Noah Buscher - Web Developer in Palm Springs",
+    title: "Noah Buscher",
     description: "Web developer and designer based in Palm Springs, CA.",
   };
 
   return (
     <>
       <Head>
-        <title key="title">{meta.title}</title>
-        <meta property="og:title" content={meta.title} key="og-title" />
-        <meta name="twitter:title" content={meta.title} key="twitter-title" />
-        <meta name="description" content={meta.description} key="description" />
-        <meta
-          name="og:description"
-          content={meta.description}
-          key="og-description"
-        />
-        <meta
-          name="twitter:description"
-          content={meta.description}
-          key="twitter-description"
-        />
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta property="og:url" content="https://noahbuscher.com" />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://noahbuscher.com" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
       </Head>
       <BlogLayout posts={posts} />
     </>

@@ -5,13 +5,10 @@ import ErrorLayout from "../layouts/Error";
 const ErrorPage = ({}) => (
   <>
     <Head>
-      <title key="title">Noah Buscher - 404</title>
-      <meta property="og:title" content="Noah Buscher - 404" key="og-title" />
-      <meta
-        name="twitter:title"
-        content="Noah Buscher - 404"
-        key="twitter-title"
-      />
+      <title>Noah Buscher - 404</title>
+      <meta property="og:title" content="Noah Buscher - 404" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:title" content="Noah Buscher - 404" />
     </Head>
     <ErrorLayout />
   </>

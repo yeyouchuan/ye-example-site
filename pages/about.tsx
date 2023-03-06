@@ -14,20 +14,14 @@ const About = ({}) => {
   return (
     <>
       <Head>
-        <title key="title">{meta.title}</title>
-        <meta property="og:title" content={meta.title} key="og-title" />
-        <meta name="twitter:title" content={meta.title} key="twitter-title" />
-        <meta name="description" content={meta.description} key="description" />
-        <meta
-          name="og:description"
-          content={meta.description}
-          key="og-description"
-        />
-        <meta
-          name="twitter:description"
-          content={meta.description}
-          key="twitter-description"
-        />
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://noahbuscher.com/about" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
       </Head>
       <PageLayout>
         <div className="flex flex-col gap-8 mt-32 md:mt-14 mb-24">

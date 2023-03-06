@@ -11,27 +11,21 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta property="og:url" content={meta.url} key="og-url" />
-        <meta name="image" content={meta.socialImage} key="image" />
-        <meta property="og:image" content={meta.socialImage} key="og-image" />
-        <meta
-          name="twitter:image"
-          content={meta.socialImage}
-          key="twitter-image"
-        />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-          key="twitter-card"
-        />
-        <link rel="shortcut icon" href="/favicon.ico" key="shortcut-icon" />
+        <meta name="robots" content="index, follow" />
+        <meta name="image" content={meta.socialImage} />
+        <meta property="og:image" content={meta.socialImage} />
+        <meta property="og:site_name" content="Noah Buscher" />
+        <meta property="og:locale" content="en-US" />
         <meta name="theme-color" content={meta.themeColor} key="theme-color" />
-        <link rel="icon" href="/favicon.ico" key="favicon" />
+        <meta name="twitter:image" content={meta.socialImage} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"
           key="viewport"
         />
+        <link rel="shortcut icon" href="/favicon.ico" key="shortcut-icon" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
         <Main />
