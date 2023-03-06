@@ -113,6 +113,7 @@ const Post = ({
           content={post.data.excerpt}
           key="twitter-description"
         />
+        <meta name="author" content="Noah Buscher" key="author" />
       </Head>
       <PostLayout post={post} renderedPostContent={renderedPostContent} />
     </>

@@ -12,19 +12,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="author" content={meta.author} key="author" />
         <meta property="og:url" content={meta.url} key="og-url" />
-        <meta name="description" content={meta.description} key="description" />
-        <meta
-          name="og:description"
-          content={meta.description}
-          key="og-description"
-        />
-        <meta
-          name="twitter:description"
-          content={meta.description}
-          key="twitter-description"
-        />
         <meta name="image" content={meta.socialImage} key="image" />
         <meta property="og:image" content={meta.socialImage} key="og-image" />
         <meta
