@@ -6,7 +6,6 @@ export default function Document() {
     themeColor: "#FBFBFB",
     author: "Noah Buscher",
     socialImage: "https://noahbuscher.com/social-image.jpg",
-    description: "Web developer and designer based in Palm Springs, CA.",
   };
 
   return (

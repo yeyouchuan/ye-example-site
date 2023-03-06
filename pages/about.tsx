@@ -7,7 +7,8 @@ import PageLayout from "../layouts/Page";
 const About = ({}) => {
   const meta = {
     title: "Noah Buscher - About",
-    description: "Web developer and designer based in Palm Springs, CA.",
+    description:
+      "Noah Buscher is a web developer and designer based in Palm Springs, CA.",
   };
 
   return (
