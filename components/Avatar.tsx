@@ -29,7 +29,7 @@ const Avatar = ({
   return (
     <div className={avatarClassnames}>
       <div className="w-full h-full relative rounded-full overflow-hidden">
-        <Image src={image} fill alt={alt} />
+        <Image src={image} fill alt={alt} quality={30} />
       </div>
       {active && <div className={activeClassnames} />}
     </div>
