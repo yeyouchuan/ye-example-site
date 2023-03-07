@@ -19,11 +19,6 @@ export default function Document() {
         <meta name="theme-color" content={meta.themeColor} key="theme-color" />
         <meta name="twitter:image" content={meta.socialImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-          key="viewport"
-        />
         <link rel="shortcut icon" href="/favicon.ico" key="shortcut-icon" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/image";
 
 import Container from "../components/Container";
 import { Post } from "../pages";
@@ -9,10 +9,14 @@ const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
     <article className="max-w-screen-lg mx-auto relative min-h-screen">
       <div className="flex flex-col items-center justify-center gap-8 text-xs text-center max-w-screen-md h-screen mx-auto">
         <div className="relative">
-          <img
-            src={post.data.images}
-            alt={post.data.caption}
-            className="rounded-md max-w-screen-lg mx-auto w-full"
+          <Image
+            src={post.data.images!}
+            alt={post.data.caption!}
+            width="0"
+            height="0"
+            sizes="100vw"
+            className="w-full h-auto rounded-md max-w-screen-lg"
+            priority
           />
           <div className="hidden md:block rounded-md bg-white/60 backdrop-blur-sm p-4 text-xs absolute left-4 bottom-4 max-w-xs text-left">
             {post.data.caption}

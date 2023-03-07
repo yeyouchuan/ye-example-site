@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import PageLayout from "../layouts/Page";
 
@@ -25,10 +26,14 @@ const About = ({}) => {
       </Head>
       <PageLayout>
         <div className="flex flex-col gap-8 mt-32 md:mt-14 mb-24">
-          <img
+          <Image
             src="/noah-about.jpeg"
             alt="A landscape portrait of Noah in a windbreaker with a white background"
-            className="w-full rounded-md"
+            width="0"
+            height="0"
+            sizes="100vw"
+            className="w-full h-auto rounded-md"
+            priority
           />
 
           <div className="flex flex-col gap-8 max-w-screen-md">

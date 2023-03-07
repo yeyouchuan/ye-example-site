@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 
 import classnames from "classnames";
@@ -56,54 +57,64 @@ const Blog = ({ posts }: any) => {
               </p>
             )}
             <AnimatePresence>
-              {getFilteredPosts(posts, selectedFilter).map((post: any) => (
-                <PostCard
-                  key={post.data.slug}
-                  category={CATEGORIES[post.data.type]}
-                  tile={isGrid}
-                  timestamp={post.data.date}
-                  location={post.data.location}
-                  caption={post.data.caption}
-                  slug={post.data.slug}
-                  type={post.data.type}
-                >
-                  {post.data.type === "Photo" && (
-                    <img
-                      src={post.data.images}
-                      alt={post.data.caption}
-                      className="object-cover h-full w-full"
-                    />
-                  )}
+              {getFilteredPosts(posts, selectedFilter).map(
+                (post: any, postIndex: number) => (
+                  <PostCard
+                    key={post.data.slug}
+                    category={CATEGORIES[post.data.type]}
+                    tile={isGrid}
+                    timestamp={post.data.date}
+                    location={post.data.location}
+                    caption={post.data.caption}
+                    slug={post.data.slug}
+                    type={post.data.type}
+                  >
+                    {post.data.type === "Photo" && (
+                      <Image
+                        src={post.data.images}
+                        alt={post.data.caption}
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="w-full h-auto"
+                        priority={postIndex <= 1}
+                      />
+                    )}
 
-                  {post.data.type === "Work" && (
-                    <img
-                      src={post.data.images}
-                      alt={post.data.caption}
-                      className="object-cover h-full w-full"
-                    />
-                  )}
+                    {post.data.type === "Work" && (
+                      <Image
+                        src={post.data.images}
+                        alt={post.data.caption}
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="w-full h-auto"
+                        priority={postIndex <= 1}
+                      />
+                    )}
 
-                  {post.data.type === "Post" && (
-                    <div className="p-4 relative flex flex-col gap-4">
-                      <h2 className="flex-1 flex-grow-0 text-lg text-charcoal flex-1 flex-grow-0 font-serif">
-                        {post.data.title}
-                      </h2>
-                      <p className="flex-1 flex-grow text-xs text-ellipsis flex-1 flex-grow">
-                        {post.data.excerpt}
-                      </p>
+                    {post.data.type === "Post" && (
+                      <div className="p-4 relative flex flex-col gap-4">
+                        <h2 className="flex-1 flex-grow-0 text-lg text-charcoal flex-1 flex-grow-0 font-serif">
+                          {post.data.title}
+                        </h2>
+                        <p className="flex-1 flex-grow text-xs text-ellipsis flex-1 flex-grow">
+                          {post.data.excerpt}
+                        </p>
 
-                      {!isGrid && (
-                        <Link
-                          href={`/posts/${post.data.slug}`}
-                          className="text-charcoal text-xs w-fit ml-auto"
-                        >
-                          Read more ↗
-                        </Link>
-                      )}
-                    </div>
-                  )}
-                </PostCard>
-              ))}
+                        {!isGrid && (
+                          <Link
+                            href={`/posts/${post.data.slug}`}
+                            className="text-charcoal text-xs w-fit ml-auto"
+                          >
+                            Read more ↗
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </PostCard>
+                )
+              )}
             </AnimatePresence>
           </div>
         </div>
