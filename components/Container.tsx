@@ -81,7 +81,6 @@ const Container = ({
                 height="0"
                 sizes="100vw"
                 className="w-[120px] md:w-[200px] h-auto ml-auto"
-                priority
               />
             </div>
             <div className="flex-1 flex flex-grow ml-0 md:ml-[340px]">

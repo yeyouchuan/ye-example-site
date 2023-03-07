@@ -42,6 +42,7 @@ const About = ({}) => {
             sizes="100vw"
             className="w-full h-auto rounded-md"
             priority
+            quality={60}
           />
 
           <div className="flex flex-col gap-8 max-w-screen-md">
