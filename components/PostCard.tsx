@@ -56,7 +56,7 @@ const PostLayout = ({
       "aspect-square w-full transition-transform ease-in-out hover:scale-105 ease-in-out hover:rotate-1 cursor-pointer flex items-center justify-center":
         tile,
       "bg-gray-light": category !== CATEGORIES.Post,
-      "bg-sky-50 border border-sky-300": category === CATEGORIES.Post,
+      "bg-[#fbfbfb] border border-gray ": category === CATEGORIES.Post,
     }
   );
 

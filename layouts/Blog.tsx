@@ -98,14 +98,19 @@ const Blog = ({ posts }: any) => {
                         <h2 className="flex-1 flex-grow-0 text-lg text-charcoal flex-1 flex-grow-0 font-serif">
                           {post.data.title}
                         </h2>
-                        <p className="flex-1 flex-grow text-xs text-ellipsis flex-1 flex-grow">
+                        <p
+                          className={classnames(
+                            "-1 flex-grow text-xs text-ellipsis flex-1 flex-grow text-gray-dark",
+                            { "lg:max-w-[80%]": !isGrid }
+                          )}
+                        >
                           {post.data.excerpt}
                         </p>
 
                         {!isGrid && (
                           <Link
                             href={`/posts/${post.data.slug}`}
-                            className="text-charcoal text-xs w-fit ml-auto"
+                            className="text-charcoal text-xs w-fit px-2.5 py-1.5 text-xs border rounded-full ml-auto border-gray"
                           >
                             Read more ↗
                           </Link>

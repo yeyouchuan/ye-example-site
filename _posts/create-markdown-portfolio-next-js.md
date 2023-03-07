@@ -10,7 +10,7 @@ excerpt: How to create a markdown-based portfolio site (or blog) for fun and pro
 
 So you've set out to create a new portfolio for yourself. You start gathering inspiration from platforms like [Godly](https://godly.website) and [Minimal Gallery](https://minimal.gallery), draw some rectangles in Figma, and open your text editor. You pause. There's thousands of ways to build your website, how do you decide which to go with? You want your website to be beautiful for the users, but you also want to be able to quickly add new posts and case studies.
 
-You decide you want to have a dynamic website (good choice!), but the dozens of CMS options weigh on you. How do you pick headless or full-stack? What if you just make a theme? So many choices.
+You decide you want to have a dynamic website (good choice!), but the dozens of CMS options weigh on you. Do you pick headless or full-stack? What if you just make a theme? So many choices.
 
 I was faced with the same dilemma a few months ago. I finally had the motivation to create a new personal website, but wasn't sure where to start. I decided to keep things simple, I'd write it with a library I knew very well: React. That only solved half of the equation, however. When it came time to decide how to power the dynamic content on the site, I knew I wanted it to be free, easy to use, and open source. A static site powered by Next.js and markdown was the obvious choice.
 
@@ -268,9 +268,9 @@ const Project = ({
 export default Project;
 ```
 
-⚠️ Note the `dangerouslySetInnerHTML`. It's ok to use here as the only user's content that will be rendered there is your's. Note this is not a great practice, however, and you should not do this on a platform that other's are able to post content to.
+⚠️ Note the `dangerouslySetInnerHTML`. It's ok to use here as the only user's content that will be rendered there is your's. This is not a great practice, however, and you should not do this on a platform that other's are able to post content to.
 
-In the next step, we are going to actually be writing a util to generate that HTML. To do so, create a new file called `markdown.tsx` in the `utils` directory and add the following:
+In the next step, we are going to be writing a utility to generate that HTML. To do so, create a new file called `markdown.tsx` in the `utils` directory and add the following:
 
 ```tsx
 import React from "react";
@@ -419,13 +419,13 @@ Great! If you go back to the home page and click a project, you should now see i
 
 ![A single project page](/media/posts/markdown-portfolio/example-project-single.png)
 
-That's really all you need to get started! You now have a simple markdown-powered portfolio! You can use this as a jumping-off point to continue building out the (easy-to-update) portfolio of your dreams! Here's some ideas to get you started:
+That's really all you need to get started! You now have a simple markdown-powered portfolio. You can use this as a jumping-off point to continue building out the (easy-to-update) portfolio of your dreams! Here's some ideas to get you started:
 
 - Use [next-sitemap](https://www.npmjs.com/package/next-sitemap) to generate a sitemap to all of your dynamic routes to make it easier for search engines to index your site
 - As you probably noted, some of the code we wrote isn't very [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself); maybe extract some of the repeated code into more utils
-- Add more types to make your development life easier
-- Add more pages to tell visitors more about yourself or how to get in touch with you
+- Add a navbar and footer
+- Add more pages to tell visitors about yourself or how to get in touch with you
 
 Looking foward to see what y'all create!
 
-[View the source on GitHub](https://github.com/noahbuscher/markdown-portfolio-tutorial)
+[View the source on GitHub](https://github.com/noahbuscher/markdown-portfolio-tutorial).
