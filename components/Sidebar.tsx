@@ -85,6 +85,7 @@ const Sidebar = ({
               <button
                 className="flex-1 flex-grow-0 w-fit ml-auto"
                 onClick={() => setIsDropdownOpen((open) => !open)}
+                aria-label="Menu"
               >
                 <MenuIcon size={32} />
               </button>

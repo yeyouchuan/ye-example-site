@@ -1,12 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import * as ReactDOMServer from "react-dom/server";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import classnames from "classnames";
 
-const Img = ({ ...props }: any) => (
-  <img className="rounded-md max-w-screen-lg mx-auto w-full" {...props} />
+const Img = ({ alt, ...props }: any) => (
+  <Image
+    width="0"
+    height="0"
+    sizes="(max-width: 768px) 100vw,
+    (max-width: 1200px) 50vw,
+    33vw"
+    className="w-full h-auto rounded-md mx-auto"
+    alt={alt}
+    {...props}
+  />
 );
 
 const Text = ({ children, node }: { children: React.ReactNode; node: any }) => {

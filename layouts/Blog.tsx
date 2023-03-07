@@ -75,7 +75,9 @@ const Blog = ({ posts }: any) => {
                         alt={post.data.caption}
                         width="0"
                         height="0"
-                        sizes="100vw"
+                        sizes="(max-width: 768px) 100vw,
+                        (max-width: 1200px) 50vw,
+                        33vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
                         quality={30}
@@ -88,7 +90,9 @@ const Blog = ({ posts }: any) => {
                         alt={post.data.caption}
                         width="0"
                         height="0"
-                        sizes="100vw"
+                        sizes="(max-width: 768px) 100vw,
+                        (max-width: 1200px) 50vw,
+                        33vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
                         quality={30}

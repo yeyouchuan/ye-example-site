@@ -8,10 +8,12 @@ import RowsIcon from "./icons/RowsIcon";
 import { CATEGORIES } from "./PostCard";
 
 const FilterButton = ({
+  alt,
   children,
   onClick,
   selected = false,
 }: {
+  alt: string;
   children: React.ReactNode;
   onClick: () => void;
   selected?: boolean;
@@ -24,6 +26,7 @@ const FilterButton = ({
       color: selected ? "#353535" : "#D1D1D1",
     }}
     onClick={onClick}
+    aria-label={alt}
   >
     {children}
   </button>
@@ -44,6 +47,7 @@ const FilterBar = ({
     <div className="flex flex-row items-end md:items-center justify-center mb-2 gap-4">
       <div className="flex flex-row gap-2 w-full flex-wrap">
         <FilterButton
+          alt="Everything"
           selected={selectedFilter === ""}
           onClick={() => onSelectFilter("")}
         >
@@ -51,6 +55,7 @@ const FilterBar = ({
         </FilterButton>
         {Object.keys(CATEGORIES).map((cat) => (
           <FilterButton
+            alt={cat}
             selected={selectedFilter === cat}
             key={cat}
             onClick={() => onSelectFilter(cat)}

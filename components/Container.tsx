@@ -79,7 +79,9 @@ const Container = ({
                 alt="Silhouette of four Joshua Trees"
                 width="0"
                 height="0"
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
                 className="w-[120px] md:w-[200px] h-auto ml-auto"
               />
             </div>

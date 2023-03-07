@@ -39,10 +39,11 @@ const About = ({}) => {
             alt="A landscape portrait of Noah in a windbreaker with a white background"
             width="0"
             height="0"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
             className="w-full h-auto rounded-md"
             priority
-            quality={60}
           />
 
           <div className="flex flex-col gap-8 max-w-screen-md">
