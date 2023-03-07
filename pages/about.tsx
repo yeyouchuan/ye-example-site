@@ -64,7 +64,7 @@ const About = ({}) => {
               many fabulous restaurants here.
             </p>
             <p className="text-charcoal text-sm leading-7 max-w-lg">
-              Outside of my full time, I occasionally take on freelance work. If
+              Outside of my full-time, I occasionally take on freelance work. If
               you’re looking for someone to work with to design and/or develop
               your web app or website, feel free to{" "}
               <Link
