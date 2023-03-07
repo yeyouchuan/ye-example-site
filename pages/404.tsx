@@ -9,6 +9,14 @@ const ErrorPage = ({}) => (
       <meta property="og:title" content="Noah Buscher - 404" />
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content="Noah Buscher - 404" />
+      <meta
+        property="og:image"
+        content="https://noahbuscher.com/social-image.jpg"
+      />
+      <meta
+        name="twitter:image"
+        content="https://noahbuscher.com/social-image.jpg"
+      />
     </Head>
     <ErrorLayout />
   </>

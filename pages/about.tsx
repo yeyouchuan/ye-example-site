@@ -23,6 +23,14 @@ const About = ({}) => {
         <meta property="og:url" content="https://noahbuscher.com/about" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
+        <meta
+          property="og:image"
+          content="https://noahbuscher.com/social-image.jpg"
+        />
+        <meta
+          name="twitter:image"
+          content="https://noahbuscher.com/social-image.jpg"
+        />
       </Head>
       <PageLayout>
         <div className="flex flex-col gap-8 mt-32 md:mt-14 mb-24">

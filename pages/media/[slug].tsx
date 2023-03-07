@@ -127,6 +127,23 @@ const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
           content={`${post.data.title} | Noah Buscher`}
         />
         <meta name="twitter:description" content={post.data.caption} />
+        {post.data.images ? (
+          <>
+            <meta property="og:image" content={post.data.images} />
+            <meta name="twitter:image" content={post.data.images} />
+          </>
+        ) : (
+          <>
+            <meta
+              property="og:image"
+              content="https://noahbuscher.com/social-image.jpg"
+            />
+            <meta
+              name="twitter:image"
+              content="https://noahbuscher.com/social-image.jpg"
+            />
+          </>
+        )}
       </Head>
       <PhotoLayout exif={exif} post={post} />
     </>

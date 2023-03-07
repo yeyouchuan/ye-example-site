@@ -79,6 +79,14 @@ export default function Home({ posts }: { posts: Post[] }) {
         <meta property="og:url" content="https://noahbuscher.com" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
+        <meta
+          property="og:image"
+          content="https://noahbuscher.com/social-image.jpg"
+        />
+        <meta
+          name="twitter:image"
+          content="https://noahbuscher.com/social-image.jpg"
+        />
       </Head>
       <BlogLayout posts={posts} />
     </>
