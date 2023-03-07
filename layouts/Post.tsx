@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import Link from "next/link";
 import readingTime from "reading-time";
 
 import Container from "../components/Container";
