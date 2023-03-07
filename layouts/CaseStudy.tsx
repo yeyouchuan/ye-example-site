@@ -1,15 +1,8 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Link from "next/link";
-import readingTime from "reading-time";
 
 import Container from "../components/Container";
 import { Post } from "../pages";
-
-const getMinutesToRead = (text: string): number => {
-  const { minutes } = readingTime(text);
-
-  return Math.round(minutes);
-};
 
 const PostLayout = ({
   post,
@@ -18,11 +11,6 @@ const PostLayout = ({
   post: Post;
   renderedPostContent: string;
 }) => {
-  const timeToRead: number = useMemo(
-    () => getMinutesToRead(post.content),
-    [post.content]
-  );
-
   return (
     <Container showHomeLink>
       <article className="max-w-screen-lg mx-auto relative min-h-screen mb-24">

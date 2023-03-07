@@ -25,3 +25,10 @@ body {
   background-color: #fbfbfb;
   color: #282828;
 }
+
+/**
+ * Syntaxhighliger
+ */
+pre {
+  font-size: 0.875rem !important;
+}
