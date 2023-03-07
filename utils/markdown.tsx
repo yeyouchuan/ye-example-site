@@ -11,8 +11,7 @@ const Img = ({ alt, ...props }: any) => (
     width="0"
     height="0"
     sizes="(max-width: 768px) 100vw,
-    (max-width: 1200px) 50vw,
-    33vw"
+    50vw"
     className="w-full h-auto rounded-md mx-auto"
     alt={alt}
     {...props}
