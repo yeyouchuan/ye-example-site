@@ -6,6 +6,7 @@ author: Noah Buscher
 location: Palm Springs, CA
 type: Post
 excerpt: How to create a markdown-based portfolio site (or blog) for fun and profit with Next.js, Typescript, and Tailwind.
+images: /media/posts/markdown-portfolio/example-project-home.png
 ---
 
 So you've set out to create a new portfolio for yourself. You start gathering inspiration from platforms like [Godly](https://godly.website) and [Minimal Gallery](https://minimal.gallery), draw some rectangles in Figma, and open your text editor. You pause. There's thousands of ways to build your website, how do you decide which to go with? You want your website to be beautiful for the users, but you also want to be able to quickly add new posts and case studies.
