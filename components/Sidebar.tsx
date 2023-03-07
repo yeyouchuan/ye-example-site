@@ -42,7 +42,7 @@ const Sidebar = ({
               href="mailto:me@noahbuscher.com"
               target="_blank"
               rel="noreferrer"
-              className="rounded-md w-full px-2 py-1.5 text-charcoal bg-white transition-all ease-in-out hover:bg-accent text-center"
+              className="rounded-full w-full px-2 py-1.5 text-charcoal bg-white transition-all ease-in-out hover:bg-accent text-center"
             >
               Email me
             </Link>

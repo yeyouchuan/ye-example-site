@@ -27,8 +27,8 @@ const Blog = ({ posts }: any) => {
     <Container>
       <div className="max-w-screen-lg mx-auto flex flex-col mb-8 md:mb-16">
         <h1 className="font-serif flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
-          I’m a web developer and designer based in Palm Springs, currently on
-          the infra team at{" "}
+          Hey, I’m Noah. 👋🏼 I’m a web developer and designer, currently on the
+          infra team at{" "}
           <Link
             href="https://dave.com"
             target="_blank"
@@ -95,9 +95,9 @@ const Blog = ({ posts }: any) => {
                       {!isGrid && (
                         <Link
                           href={`/posts/${post.data.slug}`}
-                          className="border-b border-charcoal text-charcoal text-xs w-fit ml-auto"
+                          className="text-charcoal text-xs w-fit ml-auto"
                         >
-                          Read more
+                          Read more ↗
                         </Link>
                       )}
                     </div>

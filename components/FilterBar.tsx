@@ -17,10 +17,11 @@ const FilterButton = ({
   selected?: boolean;
 }) => (
   <button
-    className="rounded-md transition-all ease-in-out cursor-pointer px-2 py-1.5 text-gray-dark text-xs border transition-all ease-in-out"
+    className="rounded-full transition-all ease-in-out cursor-pointer px-2.5 py-1.5 text-gray-dark text-xs border transition-all ease-in-out"
     style={{
-      backgroundColor: "#f5f5f5",
-      borderColor: selected ? "#8C8C8C" : "#D1D1D1",
+      backgroundColor: "transparent",
+      borderColor: selected ? "#353535" : "#D1D1D1",
+      color: selected ? "#353535" : "#D1D1D1",
     }}
     onClick={onClick}
   >

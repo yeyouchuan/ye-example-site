@@ -34,12 +34,30 @@ const Container = ({
             </p>
           </div>
           <h3 className="p-0 m-0 text-charcoal text-xs">Senior SWE, Dave</h3>
-          <Link
-            href="/about"
-            className="p-0 m-0 text-charcoal text-xs border-b border-charcoal w-fit"
-          >
-            More about me
-          </Link>
+          <div>
+            <Link
+              href="/about"
+              className="p-0 m-0 text-charcoal text-xs text-charcoal w-fit block"
+            >
+              About me ↗
+            </Link>
+            <Link
+              href="https://github.com/noahbuscher"
+              className="p-0 m-0 text-charcoal text-xs text-charcoal w-fit block"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </Link>
+            <Link
+              href="https://read.cv/noahbuscher"
+              className="p-0 m-0 text-charcoal text-xs text-charcoal w-fit block"
+              target="_blank"
+              rel="noreferrer"
+            >
+              read.cv ↗
+            </Link>
+          </div>
         </Sidebar>
         <div className="min-h-screen flex flex-col">
           <motion.div
@@ -72,29 +90,13 @@ const Container = ({
                     </h1>
                     <Link
                       href="mailto:me@noahbuscher.com"
-                      className="text-xs text-gray-dark border-b border-gray-dark w-fit"
+                      className="text-xs text-gray-dark w-fit"
                     >
-                      Get in touch
+                      Get in touch ↗
                     </Link>
                   </div>
 
                   <div className="mx-auto max-w-screen-lg flex flex-col gap-2">
-                    <p className="text-xs text-gray">
-                      Find me on{" "}
-                      <Link
-                        className="border-b border-gray inline"
-                        href="https://github.com/noahbuscher"
-                      >
-                        GitHub
-                      </Link>{" "}
-                      and{" "}
-                      <Link
-                        className="border-b border-gray inline"
-                        href="https://read.cv/noahbuscher"
-                      >
-                        read.cv
-                      </Link>
-                    </p>
                     <p className="text-xs text-gray">Updated March 2023</p>
                   </div>
                 </div>
