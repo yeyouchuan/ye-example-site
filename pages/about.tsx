@@ -69,7 +69,18 @@ const About = ({}) => {
                 trails
               </Link>
               , in the air working on my pilot’s license, or trying one of the
-              many fabulous restaurants here.
+              many fabulous restaurants here. Prior to a career in software, I
+              was an avid professional photographer. You can take a check out my
+              free-to-use photos over on{" "}
+              <Link
+                href="https://unsplash.com/@noahbuscher"
+                target="_blank"
+                rel="noreferrer"
+                className="border-b border-charcoal inline"
+              >
+                Unsplash
+              </Link>
+              .
             </p>
             <p className="text-charcoal text-sm leading-7 max-w-lg">
               Outside of my full-time, I occasionally take on freelance work. If
