@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import classnames from "classnames";
 
@@ -49,10 +50,12 @@ const Sidebar = ({
           </div>
           <div className="flex flex-row gap-2 items-center">
             <div className="flex-1">&copy; {new Date().getFullYear()}</div>
-            <img
+            <Image
               src="/connectedness.svg"
               alt="Two interlocking circles"
-              className="flex-1 h-4 w-auto flex-grow-0"
+              className="flex-1 flex-grow-0"
+              width="24"
+              height="16"
             />
           </div>
         </div>

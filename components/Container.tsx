@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
@@ -74,10 +74,15 @@ const Container = ({
 
           <div className="flex-1 justify-end flex flex-col flex-grow">
             <div className="flex-1 flex-grow-0 ml-auto pr-8">
-              <img
+              <img />
+              <Image
                 src="/trees.svg"
                 alt="Silhouette of four Joshua Trees"
+                width="0"
+                height="0"
+                sizes="100vw"
                 className="w-[120px] md:w-[200px] h-auto ml-auto"
+                priority
               />
             </div>
             <div className="flex-1 flex flex-grow ml-0 md:ml-[340px]">
