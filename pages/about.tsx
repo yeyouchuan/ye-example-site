@@ -39,7 +39,7 @@ const About = ({}) => {
           <div className="flex flex-col gap-8 max-w-screen-md">
             <p className="text-charcoal text-sm leading-7 max-w-lg">
               Hey, I’m Noah. I’m currently a senior software engineer on the
-              front end infrastructure team at{" "}
+              frontend infrastructure team at{" "}
               <Link
                 href="https://dave.com"
                 target="_blank"
@@ -49,7 +49,7 @@ const About = ({}) => {
                 Dave
               </Link>
               . There, I focus on building dev tools, creating CI/CD pipelines,
-              mainting our component library, and more. I work remove from
+              maintaining our component library, and more. I work remote from
               (beautiful) Palm Springs, CA. After the workday, you can likely
               find me on the{" "}
               <Link
