@@ -70,7 +70,7 @@ const About = ({}) => {
               </Link>
               , in the air working on my pilot’s license, or trying one of the
               many fabulous restaurants here. Prior to a career in software, I
-              was an avid professional photographer. You can take a check out my
+              was an avid professional photographer. You can check out my
               free-to-use photos over on{" "}
               <Link
                 href="https://unsplash.com/@noahbuscher"
