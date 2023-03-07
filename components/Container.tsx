@@ -74,7 +74,6 @@ const Container = ({
 
           <div className="flex-1 justify-end flex flex-col flex-grow">
             <div className="flex-1 flex-grow-0 ml-auto pr-8">
-              <img />
               <Image
                 src="/trees.svg"
                 alt="Silhouette of four Joshua Trees"
