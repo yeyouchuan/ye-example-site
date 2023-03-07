@@ -80,7 +80,7 @@ const Blog = ({ posts }: any) => {
                         33vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
-                        quality={30}
+                        quality={40}
                       />
                     )}
 
@@ -95,7 +95,7 @@ const Blog = ({ posts }: any) => {
                         33vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
-                        quality={30}
+                        quality={40}
                       />
                     )}
 
