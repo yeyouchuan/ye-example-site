@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://noahbuscher.com
+
+# Sitemaps
+Sitemap: https://noahbuscher.com/sitemap.xml
