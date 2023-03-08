@@ -21,14 +21,14 @@ const PostLayout = ({
           {post?.data?.date && (
             <div className="flex-1  hidden md:block">
               <small className="text-gray">Publish date</small>
-              <p>{post.data.date}</p>
+              <span className="block">{post.data.date}</span>
             </div>
           )}
 
           {post?.data?.skills && (
             <div className="flex-1">
               <small className="text-gray">Skills</small>
-              <p>{post.data.skills}</p>
+              <span className="block">{post.data.skills}</span>
             </div>
           )}
 

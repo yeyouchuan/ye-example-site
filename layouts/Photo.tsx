@@ -26,19 +26,25 @@ const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
           <div className="flex flex-row gap-8">
             <div>
               <small className="text-gray">Shutter speed</small>
-              <p className="text-charcoal">1/{exif?.shutterSpeed || "--"}</p>
+              <span className="text-charcoal block">
+                1/{exif?.shutterSpeed || "--"}
+              </span>
             </div>
             <div>
               <small className="text-gray">Aperature</small>
-              <p className="text-charcoal">f/{exif?.aperature || "--"}</p>
+              <span className="block text-charcoal">
+                f/{exif?.aperature || "--"}
+              </span>
             </div>
             <div>
               <small className="text-gray">ISO</small>
-              <p className="text-charcoal">{exif?.iso || "--"}</p>
+              <span className="block text-charcoal">{exif?.iso || "--"}</span>
             </div>
             <div>
               <small className="text-gray">Taken on</small>
-              <p className="text-charcoal">{exif?.camera || "--"}</p>
+              <span className="block text-charcoal">
+                {exif?.camera || "--"}
+              </span>
             </div>
           </div>
         </div>

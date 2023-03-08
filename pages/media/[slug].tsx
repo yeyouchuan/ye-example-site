@@ -129,8 +129,14 @@ const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
         <meta name="twitter:description" content={post.data.caption} />
         {post.data.images ? (
           <>
-            <meta property="og:image" content={post.data.images} />
-            <meta name="twitter:image" content={post.data.images} />
+            <meta
+              property="og:image"
+              content={`https://noahbuscher.com/${post.data.images}`}
+            />
+            <meta
+              name="twitter:image"
+              content={`https://noahbuscher.com/${post.data.images}`}
+            />
           </>
         ) : (
           <>

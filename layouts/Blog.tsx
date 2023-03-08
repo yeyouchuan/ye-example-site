@@ -51,10 +51,10 @@ const Blog = ({ posts }: any) => {
 
           <div className={containerClasses}>
             {getFilteredPosts(posts, selectedFilter).length === 0 && (
-              <p className="text-xs text-gray">
+              <span className="text-xs text-gray block">
                 No posts in {selectedFilter}
                 {selectedFilter !== "Work" && "s"} (yet)
-              </p>
+              </span>
             )}
             <AnimatePresence>
               {getFilteredPosts(posts, selectedFilter).map(

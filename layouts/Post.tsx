@@ -32,32 +32,32 @@ const PostLayout = ({
           {post?.data?.date && (
             <div className="flex-1">
               <small className="text-gray">Publish date</small>
-              <p>{post.data.date}</p>
+              <span className="block">{post.data.date}</span>
             </div>
           )}
 
           {post?.data?.location && (
             <div className="flex-1 hidden md:block">
               <small className="text-gray">Location posted</small>
-              <p>{post.data.location}</p>
+              <span className="block">{post.data.location}</span>
             </div>
           )}
 
           <div className="flex-1">
             <small className="text-gray">Read time</small>
-            <p>
+            <span className="block">
               {timeToRead} minute{timeToRead > 1 ? "s" : ""}
-            </p>
+            </span>
           </div>
 
           {post?.data?.author && (
             <div className="flex-1 hidden md:block">
               <small className="text-gray">Author</small>
-              <p>{post.data.author}</p>
+              <span className="block">{post.data.author}</span>
             </div>
           )}
         </div>
-        <div
+        <article
           className="flex flex-col gap-8"
           dangerouslySetInnerHTML={{ __html: renderedPostContent }}
         />
