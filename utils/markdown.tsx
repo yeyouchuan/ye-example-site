@@ -22,7 +22,7 @@ const Text = ({ children, node }: { children: React.ReactNode; node: any }) => {
   if (node.children[0].tagName === "img") {
     const image: any = node.children[0];
 
-    return <Img src={image.properties.src} />;
+    return <Img src={image.properties.src} alt={image.properties.alt} />;
   }
   return (
     <p className="flex-1 flex-grow w-full text-sm leading-7 max-w-screen-md mx-auto">
