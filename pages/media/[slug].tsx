@@ -131,11 +131,11 @@ const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
           <>
             <meta
               property="og:image"
-              content={`https://noahbuscher.com/${post.data.images}`}
+              content={`https://noahbuscher.com${post.data.images}`}
             />
             <meta
               name="twitter:image"
-              content={`https://noahbuscher.com/${post.data.images}`}
+              content={`https://noahbuscher.com${post.data.images}`}
             />
           </>
         ) : (
