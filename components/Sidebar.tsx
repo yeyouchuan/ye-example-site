@@ -37,7 +37,7 @@ const Sidebar = ({
         </Link>
         {children}
         <div className="absolute bottom-12 left-8 right-8 flex flex-col gap-8 text-xs">
-          <div className="bg-gray-light rounded-md p-4 w-full flex flex-col gap-6 text-gray-dark">
+          <section className="bg-gray-light rounded-md p-4 w-full flex flex-col gap-6 text-gray-dark">
             Currently available for freelance.
             <Link
               href="mailto:me@noahbuscher.com"
@@ -47,7 +47,7 @@ const Sidebar = ({
             >
               Email me
             </Link>
-          </div>
+          </section>
           <div className="flex flex-row gap-2 items-center">
             <div className="flex-1">&copy; {new Date().getFullYear()}</div>
             <Image
@@ -70,7 +70,7 @@ const Sidebar = ({
         </Link>
       )}
 
-      <div className="fixed top-8 left-8 right-8 z-10 flex flex-row gap-2 flex-col">
+      <header className="fixed top-8 left-8 right-8 z-10 flex flex-row gap-2 flex-col">
         <div className="w-full flex flex-col md:hidden p-2 bg-white/70 backdrop-blur-md rounded-3xl border border-gray-light">
           <div className="flex flex-row items-center">
             <Link href="/">
@@ -102,7 +102,7 @@ const Sidebar = ({
           </div>
           <motion.div className={dropdownClassnames}>{children}</motion.div>
         </div>
-      </div>
+      </header>
     </div>
   );
 };

@@ -60,7 +60,7 @@ const Container = ({
           </div>
         </Sidebar>
         <div className="min-h-screen flex flex-col">
-          <motion.div
+          <motion.main
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
@@ -70,7 +70,7 @@ const Container = ({
             className={contentClassnames}
           >
             {children}
-          </motion.div>
+          </motion.main>
 
           <div className="flex-1 justify-end flex flex-col flex-grow">
             <div className="flex-1 flex-grow-0 ml-auto pr-8">
