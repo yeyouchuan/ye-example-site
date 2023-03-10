@@ -1,15 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Container from "@/components/Container";
-import type { Post } from "@/types/index";
+import type { Post } from "@/types";
 
-const PostLayout = ({
-  post,
-  renderedPostContent,
-}: {
+const PostLayout: React.FC<{
   post: Post;
   renderedPostContent: string;
-}) => {
+}> = ({ post, renderedPostContent }) => {
   return (
     <Container showHomeLink>
       <article className="max-w-screen-lg mx-auto relative min-h-screen mb-24">

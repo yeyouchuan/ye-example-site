@@ -1,3 +1,6 @@
+/**
+ * Posts
+ */
 export const CATEGORIES: { [type: string]: string } = {
   Post: "Post",
   Work: "Work",
@@ -21,4 +24,14 @@ export type Post = {
     skills?: string;
     link?: string;
   };
+};
+
+/**
+ * Photos
+ */
+export type ExifData = {
+  camera?: string;
+  iso?: string;
+  shutterSpeed?: string;
+  aperature?: string;
 };

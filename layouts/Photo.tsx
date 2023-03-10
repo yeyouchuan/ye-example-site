@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Container from "@/components/Container";
-import type { Post } from "@/types/index";
+import type { Post } from "@/types";
 
-const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
+const PhotoLayout: React.FC<{ exif?: any; post: Post }> = ({ exif, post }) => (
   <Container showHomeLink>
     <article className="max-w-screen-lg mx-auto relative min-h-screen">
       <div className="flex flex-col items-center justify-center gap-8 text-xs text-center max-w-screen-md h-screen mx-auto">

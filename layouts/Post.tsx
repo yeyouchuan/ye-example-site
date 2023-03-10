@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import readingTime from "reading-time";
 import Container from "@/components/Container";
-import type { Post } from "@/types/index";
+import type { Post } from "@/types";
 
 const getMinutesToRead = (text: string): number => {
   const { minutes } = readingTime(text);
@@ -9,13 +9,10 @@ const getMinutesToRead = (text: string): number => {
   return Math.round(minutes);
 };
 
-const PostLayout = ({
-  post,
-  renderedPostContent,
-}: {
+const PostLayout: React.FC<{
   post: Post;
   renderedPostContent: string;
-}) => {
+}> = ({ post, renderedPostContent }) => {
   const timeToRead: number = useMemo(
     () => getMinutesToRead(post.content),
     [post.content]

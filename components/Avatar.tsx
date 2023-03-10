@@ -2,17 +2,12 @@ import React from "react";
 import Image from "next/image";
 import classnames from "classnames";
 
-const Avatar = ({
-  alt,
-  image,
-  active = false,
-  small = false,
-}: {
+const Avatar: React.FC<{
   alt: string;
   image: string;
   active?: boolean;
   small?: boolean;
-}) => {
+}> = ({ alt, image, active = false, small = false }) => {
   const avatarClassnames = classnames("relative", {
     "w-14 h-14": !small,
     "w-8 h-8": small,

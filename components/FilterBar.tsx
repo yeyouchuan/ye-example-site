@@ -2,19 +2,14 @@ import React from "react";
 import { AnimatePresence } from "framer-motion";
 import GridIcon from "@/components/icons/GridIcon";
 import RowsIcon from "@/components/icons/RowsIcon";
-import { CATEGORIES } from "@/types/index";
+import { CATEGORIES } from "@/types";
 
-const FilterButton = ({
-  alt,
-  children,
-  onClick,
-  selected = false,
-}: {
+const FilterButton: React.FC<{
   alt: string;
   children: React.ReactNode;
   onClick: () => void;
   selected?: boolean;
-}) => (
+}> = ({ alt, children, onClick, selected = false }) => (
   <button
     className="rounded-full transition-all ease-in-out cursor-pointer px-2.5 py-1.5 text-gray-dark text-xs border transition-all ease-in-out"
     style={{

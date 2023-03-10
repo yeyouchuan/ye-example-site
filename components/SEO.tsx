@@ -10,18 +10,18 @@ const SEO_DEFAULTS = {
   image: "https://noahbuscher.com/social-image.jpg",
 };
 
-const SEO = ({
-  title = SEO_DEFAULTS.title,
-  description = SEO_DEFAULTS.description,
-  type = SEO_DEFAULTS.type,
-  site_name = SEO_DEFAULTS.site_name,
-  image = SEO_DEFAULTS.image,
-}: {
+const SEO: React.FC<{
   title?: string;
   description?: string;
   type?: string;
   site_name?: string;
   image?: string;
+}> = ({
+  title = SEO_DEFAULTS.title,
+  description = SEO_DEFAULTS.description,
+  type = SEO_DEFAULTS.type,
+  site_name = SEO_DEFAULTS.site_name,
+  image = SEO_DEFAULTS.image,
 }) => (
   <Head>
     <title>{title}</title>

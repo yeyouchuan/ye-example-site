@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Container from "@/components/Container";
 
-const ErrorLayout = ({}) => (
+const ErrorLayout: React.FC = () => (
   <Container>
     <article className="max-w-screen-lg mx-auto relative min-h-screen">
       <div className="flex flex-col items-center justify-center gap-8 text-xs text-center max-w-screen-md h-screen mx-auto">

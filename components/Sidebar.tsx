@@ -7,15 +7,11 @@ import Avatar from "@/components/Avatar";
 import MenuIcon from "@/components/icons/MenuIcon";
 import { isNowWithinTime } from "@/utils/time";
 
-const Sidebar = ({
-  avatar,
-  children,
-  showHomeLink = false,
-}: {
+const Sidebar: React.FC<{
   avatar: string;
   children: React.ReactNode;
   showHomeLink?: boolean;
-}) => {
+}> = ({ avatar, children, showHomeLink = false }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownClassnames = classnames({

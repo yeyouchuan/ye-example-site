@@ -4,15 +4,11 @@ import React from "react";
  * Icon from https://iconic.app
  */
 
-const Location = ({
-  color = "#D0D0D0",
-  size = 18,
-  ...props
-}: {
+const Location: React.FC<{
   color?: string;
   size?: number;
   [prop: string]: any;
-}) => (
+}> = ({ color = "#D0D0D0", size = 18, ...props }) => (
   <svg
     width={size}
     height={size}

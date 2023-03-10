@@ -6,15 +6,15 @@ import classnames from "classnames";
 import Container from "@/components/Container";
 import FilterBar from "@/components/FilterBar";
 import PostCard from "@/components/PostCard";
-import { CATEGORIES } from "@/types/index";
-import type { Post } from "@/types/index";
+import { CATEGORIES } from "@/types";
+import type { Post } from "@/types";
 
 const getFilteredPosts = (posts: Post[], filter: any) =>
   filter === ""
     ? posts
     : posts.filter((post: any) => post.data.type === filter);
 
-const Blog = ({ posts }: any) => {
+const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
   const [isGrid, setIsGrid] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState("");
 

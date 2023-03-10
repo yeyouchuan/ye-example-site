@@ -5,8 +5,8 @@ import classnames from "classnames";
 import FolderIcon from "@/components/icons/FolderIcon";
 import CalendarIcon from "@/components/icons/CalendarIcon";
 import LocationIcon from "@/components/icons/LocationIcon";
-import { CATEGORIES } from "@/types/index";
-import type { Category } from "@/types/index";
+import { CATEGORIES } from "@/types";
+import type { Category } from "@/types";
 
 const getLink = (type: String, slug: string): string => {
   switch (type) {
@@ -21,16 +21,7 @@ const getLink = (type: String, slug: string): string => {
   return "/";
 };
 
-const PostLayout = ({
-  caption,
-  children,
-  category,
-  timestamp,
-  tile = false,
-  type,
-  slug,
-  location,
-}: {
+const PostLayout: React.FC<{
   caption?: string;
   children: React.ReactNode;
   category?: Category;
@@ -39,6 +30,15 @@ const PostLayout = ({
   type: string;
   slug: string;
   location?: string;
+}> = ({
+  caption,
+  children,
+  category,
+  timestamp,
+  tile = false,
+  type,
+  slug,
+  location,
 }) => {
   const router = useRouter();
 

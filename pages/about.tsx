@@ -4,7 +4,7 @@ import Image from "next/image";
 import PageLayout from "@/layouts/Page";
 import SEO from "@/components/SEO";
 
-const About = ({}) => (
+const About: React.FC = ({}) => (
   <>
     <SEO title="Noah Buscher - About" />
     <PageLayout>

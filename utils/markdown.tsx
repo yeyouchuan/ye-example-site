@@ -77,6 +77,7 @@ const Code = ({ node, inline, className, children, ...props }: any): any => {
   const match = /language-(\w+)/.exec(className || "");
   return !inline && match ? (
     <SyntaxHighlighter
+      //eslint-disable-next-line
       children={String(children).replace(/\n$/, "")}
       language={match[1]}
       PreTag="div"

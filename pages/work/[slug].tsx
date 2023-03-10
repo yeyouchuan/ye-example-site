@@ -1,38 +1,16 @@
 import React from "react";
-import { promises as fs } from "fs";
-import path from "path";
-import matter from "gray-matter";
 import CaseStudyLayout from "@/layouts/CaseStudy";
 import SEO from "@/components/SEO";
+import { getPostBySlug, getSlugsByType, nextifySlugs } from "@/utils/posts";
 import { renderMarkdownToHTML } from "@/utils/markdown";
-import type { Post } from "@/types/index";
+import type { Post } from "@/types";
 
-// @todo move to config
-const POSTS_DIR = "_posts";
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const postsDir = path.join(process.cwd(), POSTS_DIR);
-  const files = await fs.readdir(postsDir);
-
-  const postPaths = files.filter((file) => {
-    const ext = path.extname(file);
-    return ext === ".md";
-  });
-
-  const posts = await Promise.all(
-    postPaths.map(async (file: string) => {
-      const contents = await fs.readFile(path.join(postsDir, file), "utf8");
-      const parsed = matter(contents);
-
-      return {
-        content: parsed.content,
-        data: parsed.data,
-      };
-    })
-  );
-
-  const post = posts.find((p) => p?.data?.slug === params.slug);
-
+export const getStaticProps = async ({
+  params,
+}: {
+  params: { slug: string };
+}) => {
+  const post = await getPostBySlug(params.slug);
   const renderedPostContent = renderMarkdownToHTML(post?.content!);
 
   return {
@@ -41,59 +19,24 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       renderedPostContent,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
-  const postsDir = path.join(process.cwd(), POSTS_DIR);
-  const files = await fs.readdir(postsDir);
+export const getStaticPaths = async () =>
+  nextifySlugs(await getSlugsByType("Work"));
 
-  const postPaths = files.filter((file) => {
-    const ext = path.extname(file);
-    return ext === ".md";
-  });
-
-  const posts = await Promise.all(
-    postPaths.map(async (file: string) => {
-      const contents = await fs.readFile(path.join(postsDir, file), "utf8");
-      const parsed = matter(contents);
-
-      return {
-        content: parsed.content,
-        data: parsed.data,
-      };
-    })
-  );
-
-  const paths = posts
-    .filter((post) => post?.data?.type === "Work")
-    .map((post) => ({
-      params: { slug: post?.data?.slug },
-    }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-const Post = ({
-  post,
-  renderedPostContent,
-}: {
+const Post: React.FC<{
   post: Post;
   renderedPostContent: string;
-}) => {
-  return (
-    <>
-      <SEO
-        title={`${post.data.title} | Noah Buscher`}
-        description={post.data.caption}
-        image={post.data.image}
-      />
+}> = ({ post, renderedPostContent }) => (
+  <>
+    <SEO
+      title={`${post.data.title} | Noah Buscher`}
+      description={post.data.caption}
+      image={post.data.image}
+    />
 
-      <CaseStudyLayout post={post} renderedPostContent={renderedPostContent} />
-    </>
-  );
-};
+    <CaseStudyLayout post={post} renderedPostContent={renderedPostContent} />
+  </>
+);
 
 export default Post;

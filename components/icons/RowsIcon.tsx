@@ -5,15 +5,11 @@ import { motion } from "framer-motion";
  * Icon from https://iconic.app
  */
 
-const Rows = ({
-  color = "#C9C9C9",
-  size = 18,
-  ...props
-}: {
+const Rows: React.FC<{
   color?: string;
   size?: number;
   [prop: string]: any;
-}) => (
+}> = ({ color = "#C9C9C9", size = 18, ...props }) => (
   <motion.svg
     width={size}
     height={size}
