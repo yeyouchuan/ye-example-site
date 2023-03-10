@@ -99,9 +99,12 @@ const Blog = ({ posts }: any) => {
                     )}
 
                     {post.data.type === "Post" && (
-                      <div className="p-4 relative flex flex-col gap-4">
+                      <div className="p-4 relative flex flex-col gap-2">
                         <h2 className="flex-1 flex-grow-0 text-lg text-charcoal flex-1 flex-grow-0 font-serif">
                           {post.data.title}
+                        </h2>
+                        <h2 className="flex-1 flex-grow-0 text-xs text-gray-dark flex-1 flex-grow-0 opacity-60 mb-4">
+                          Posted on {post.data.date}
                         </h2>
                         <p
                           className={classnames(
@@ -115,9 +118,9 @@ const Blog = ({ posts }: any) => {
                         {!isGrid && (
                           <Link
                             href={`/posts/${post.data.slug}`}
-                            className="text-charcoal text-xs w-fit px-2.5 py-1.5 text-xs border rounded-full ml-auto border-gray"
+                            className="text-gray-dark text-xs w-fit text-xs ml-auto absolute top-4 right-4"
                           >
-                            Read more ↗
+                            ↗
                           </Link>
                         )}
                       </div>
