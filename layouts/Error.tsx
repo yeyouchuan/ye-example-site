@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
-import Container from "../components/Container";
-import { Post } from "../pages";
+import Container from "@/components/Container";
 
 const ErrorLayout = ({}) => (
   <Container>

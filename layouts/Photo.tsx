@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-
-import Container from "../components/Container";
-import { Post } from "../pages";
+import Container from "@/components/Container";
+import type { Post } from "@/types/index";
 
 const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
   <Container showHomeLink>

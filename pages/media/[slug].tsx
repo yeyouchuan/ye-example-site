@@ -1,13 +1,12 @@
 import React from "react";
-import Head from "next/head";
 import { promises as fs } from "fs";
 import path from "path";
 // @ts-ignore
 import exif from "exif";
 import matter from "gray-matter";
-
-import PhotoLayout from "../../layouts/Photo";
-import { Post } from "../";
+import PhotoLayout from "@/layouts/Photo";
+import SEO from "@/components/SEO";
+import type { Post } from "@/types/index";
 
 // @todo move to config
 const POSTS_DIR = "_posts";
@@ -109,48 +108,11 @@ export async function getStaticPaths() {
 const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
   return (
     <>
-      <Head>
-        <title>{`${post.data.title} | Noah Buscher`}</title>
-        <meta name="description" content={post.data.caption} />
-        <meta
-          property="og:title"
-          content={`${post.data.title} | Noah Buscher`}
-        />
-        <meta property="og:description" content={post.data.caption} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`https://noahbuscher.com/media/${post.data.slug}`}
-        />
-        <meta
-          name="twitter:title"
-          content={`${post.data.title} | Noah Buscher`}
-        />
-        <meta name="twitter:description" content={post.data.caption} />
-        {post.data.images ? (
-          <>
-            <meta
-              property="og:image"
-              content={`https://noahbuscher.com${post.data.images}`}
-            />
-            <meta
-              name="twitter:image"
-              content={`https://noahbuscher.com${post.data.images}`}
-            />
-          </>
-        ) : (
-          <>
-            <meta
-              property="og:image"
-              content="https://noahbuscher.com/social-image.jpg"
-            />
-            <meta
-              name="twitter:image"
-              content="https://noahbuscher.com/social-image.jpg"
-            />
-          </>
-        )}
-      </Head>
+      <SEO
+        title={`${post.data.title} | Noah Buscher`}
+        description={post.data.caption}
+        image={`https://noahbuscher.com${post.data.images}`}
+      />
       <PhotoLayout exif={exif} post={post} />
     </>
   );

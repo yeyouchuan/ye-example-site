@@ -213,7 +213,7 @@ export default function Home({ projects }: { projects: Project[] }) {
 }
 ```
 
-This may look a little confusing if you've never seen `getStaticProps` before, but you can read more about it [here](https://nextjs.org/docs/basic-features/data-fetching/get-static-props). All it's doing here is getting an array of Projects that we then use `dayjs` to sort from a human-readable date in the metadata and pass that array as a prop to our `Grid`.
+This may look a little confusing if you've never seen `getStaticProps` before, but you can read more about it [in the Next.js docs](https://nextjs.org/docs/basic-features/data-fetching/get-static-props). All it's doing here is getting an array of Projects that we then use `dayjs` to sort from a human-readable date in the metadata and pass that array as a prop to our `Grid`.
 
 Now just run `pnpm dev` and you should see your project on the home page!
 
@@ -414,7 +414,7 @@ const Project = ({
 export default Project;
 ```
 
-Similar to the `index.tsx` page, we are grabbing the list of projects again, however this time we are filtering to find the single project whose slug matches that in the dynamic page's URL. Then, we are defining a function called `getStaticPaths` that is another special Next.js feature to dynamically create the static paths for generated content (in this case, our Projects!). You can read more about that [here](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths).
+Similar to the `index.tsx` page, we are grabbing the list of projects again, however this time we are filtering to find the single project whose slug matches that in the dynamic page's URL. Then, we are defining a function called `getStaticPaths` that is another special Next.js feature to dynamically create the static paths for generated content (in this case, our Projects!). You can read more about that [in the Next.js docs](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths).
 
 Great! If you go back to the home page and click a project, you should now see it takes you to a single project page!
 

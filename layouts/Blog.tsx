@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
-
 import classnames from "classnames";
-
-import Container from "../components/Container";
-import FilterBar from "../components/FilterBar";
-import PostCard, { CATEGORIES } from "../components/PostCard";
-import { Post } from "../pages";
+import Container from "@/components/Container";
+import FilterBar from "@/components/FilterBar";
+import PostCard from "@/components/PostCard";
+import { CATEGORIES } from "@/types/index";
+import type { Post } from "@/types/index";
 
 const getFilteredPosts = (posts: Post[], filter: any) =>
   filter === ""

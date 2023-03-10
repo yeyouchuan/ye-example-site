@@ -1,8 +1,7 @@
 import React, { useMemo } from "react";
 import readingTime from "reading-time";
-
-import Container from "../components/Container";
-import { Post } from "../pages";
+import Container from "@/components/Container";
+import type { Post } from "@/types/index";
 
 const getMinutesToRead = (text: string): number => {
   const { minutes } = readingTime(text);

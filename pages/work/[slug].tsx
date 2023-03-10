@@ -1,12 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
-
-import CaseStudyLayout from "../../layouts/CaseStudy";
-import { renderMarkdownToHTML } from "../../utils/markdown";
-import { Post } from "../";
+import CaseStudyLayout from "@/layouts/CaseStudy";
+import SEO from "@/components/SEO";
+import { renderMarkdownToHTML } from "@/utils/markdown";
+import type { Post } from "@/types/index";
 
 // @todo move to config
 const POSTS_DIR = "_posts";
@@ -86,48 +85,12 @@ const Post = ({
 }) => {
   return (
     <>
-      <Head>
-        <title>{`${post.data.title} | Noah Buscher`}</title>
-        <meta name="description" content={post.data.caption} />
-        <meta
-          property="og:title"
-          content={`${post.data.title} | Noah Buscher`}
-        />
-        <meta property="og:description" content={post.data.caption} />
-        <meta
-          property="og:url"
-          content={`https://noahbuscher.com/posts/${post.data.slug}`}
-        />
-        <meta property="og:type" content="article" />
-        <meta
-          name="twitter:title"
-          content={`${post.data.title} | Noah Buscher`}
-        />
-        <meta name="twitter:description" content={post.data.caption} />
-        {post.data.images ? (
-          <>
-            <meta
-              property="og:image"
-              content={`https://noahbuscher.com${post.data.images}`}
-            />
-            <meta
-              name="twitter:image"
-              content={`https://noahbuscher.com${post.data.images}`}
-            />
-          </>
-        ) : (
-          <>
-            <meta
-              property="og:image"
-              content="https://noahbuscher.com/social-image.jpg"
-            />
-            <meta
-              name="twitter:image"
-              content="https://noahbuscher.com/social-image.jpg"
-            />
-          </>
-        )}
-      </Head>
+      <SEO
+        title={`${post.data.title} | Noah Buscher`}
+        description={post.data.caption}
+        image={post.data.images}
+      />
+
       <CaseStudyLayout post={post} renderedPostContent={renderedPostContent} />
     </>
   );

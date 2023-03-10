@@ -3,11 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import classnames from "classnames";
-
-import Avatar from "./Avatar";
-import MenuIcon from "./icons/MenuIcon";
-
-import { isNowWithinTime } from "../utils/time";
+import Avatar from "@/components/Avatar";
+import MenuIcon from "@/components/icons/MenuIcon";
+import { isNowWithinTime } from "@/utils/time";
 
 const Sidebar = ({
   avatar,

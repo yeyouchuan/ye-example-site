@@ -1,6 +1,5 @@
 import React from "react";
-
-import Container from "../components/Container";
+import Container from "@/components/Container";
 
 const Page = ({ children }: { children: React.ReactNode }) => {
   return (

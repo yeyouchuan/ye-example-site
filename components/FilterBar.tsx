@@ -1,11 +1,8 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import classnames from "classnames";
-
-import GridIcon from "./icons/GridIcon";
-import RowsIcon from "./icons/RowsIcon";
-
-import { CATEGORIES } from "./PostCard";
+import GridIcon from "@/components/icons/GridIcon";
+import RowsIcon from "@/components/icons/RowsIcon";
+import { CATEGORIES } from "@/types/index";
 
 const FilterButton = ({
   alt,

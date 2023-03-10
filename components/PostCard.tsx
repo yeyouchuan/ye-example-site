@@ -2,18 +2,11 @@ import React from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import classnames from "classnames";
-
-import FolderIcon from "./icons/FolderIcon";
-import CalendarIcon from "./icons/CalendarIcon";
-import LocationIcon from "./icons/LocationIcon";
-
-export const CATEGORIES: { [type: string]: string } = {
-  Post: "Post",
-  Work: "Work",
-  Photo: "Photo",
-};
-
-export type Category = typeof CATEGORIES[keyof typeof CATEGORIES];
+import FolderIcon from "@/components/icons/FolderIcon";
+import CalendarIcon from "@/components/icons/CalendarIcon";
+import LocationIcon from "@/components/icons/LocationIcon";
+import { CATEGORIES } from "@/types/index";
+import type { Category } from "@/types/index";
 
 const getLink = (type: String, slug: string): string => {
   switch (type) {

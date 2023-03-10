@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-
-import Container from "../components/Container";
-import { Post } from "../pages";
+import Container from "@/components/Container";
+import type { Post } from "@/types/index";
 
 const PostLayout = ({
   post,
