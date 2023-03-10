@@ -70,7 +70,7 @@ const Container = ({
             {children}
           </motion.main>
 
-          <div className="flex-1 justify-end flex flex-col flex-grow">
+          <footer className="flex-1 justify-end flex flex-col flex-grow">
             <div className="flex-1 flex-grow-0 ml-auto pr-8">
               <Image
                 src="/trees.svg"
@@ -105,7 +105,7 @@ const Container = ({
                 </div>
               </div>
             </div>
-          </div>
+          </footer>
         </div>
       </div>
     </div>
