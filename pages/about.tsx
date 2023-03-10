@@ -77,7 +77,7 @@ const About = ({}) => (
             <Link
               className="border-b border-charcoal inline"
               target="_blank"
-              rel="noreferrer"
+              rel="me"
               href="https://github.com/noahbuscher"
             >
               GitHub
@@ -86,7 +86,7 @@ const About = ({}) => (
             <Link
               className="border-b border-charcoal inline"
               target="_blank"
-              rel="noreferrer"
+              rel="me"
               href="https://read.cv/noahbuscher"
             >
               read.cv

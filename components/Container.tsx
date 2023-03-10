@@ -43,7 +43,7 @@ const Container = ({
               href="https://github.com/noahbuscher"
               className="p-0 m-0 text-charcoal text-xs text-charcoal w-fit block"
               target="_blank"
-              rel="noreferrer"
+              rel="me"
             >
               GitHub ↗
             </Link>
@@ -51,7 +51,7 @@ const Container = ({
               href="https://read.cv/noahbuscher"
               className="p-0 m-0 text-charcoal text-xs text-charcoal w-fit block"
               target="_blank"
-              rel="noreferrer"
+              rel="me"
             >
               read.cv ↗
             </Link>
