@@ -28,13 +28,13 @@ const getImageExif = (mediaPath: string): Promise<ExifData> => {
       if (error) reject(error.message);
 
       resolve({
-        camera: exifData.image.Model,
-        iso: exifData.exif.ISO,
+        camera: exifData?.image.Model,
+        iso: exifData?.exif.ISO,
         shutterSpeed: parseFloat(
           // @ts-ignore
-          Math.pow(2, parseFloat(exifData.exif.ShutterSpeedValue))
+          Math.pow(2, parseFloat(exifData?.exif.ShutterSpeedValue))
         ).toFixed(0),
-        aperature: parseFloat(exifData.exif.ApertureValue).toFixed(2),
+        aperature: parseFloat(exifData?.exif.ApertureValue).toFixed(2),
       });
     });
   });
@@ -64,12 +64,20 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const post = posts.find((p) => p?.data?.slug === params.slug);
   const mediaPath = path.join(MEDIA_DIR, post?.data?.image);
 
-  return {
-    props: {
-      post,
-      exif: await getImageExif(mediaPath),
-    },
-  };
+  try {
+    return {
+      props: {
+        post,
+        exif: await getImageExif(mediaPath),
+      },
+    };
+  } catch (e) {
+    return {
+      props: {
+        post,
+      },
+    };
+  }
 }
 
 export async function getStaticPaths() {
