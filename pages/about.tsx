@@ -28,7 +28,7 @@ const About = ({}) => (
               href="https://dave.com"
               target="_blank"
               rel="noreferrer"
-              className="border-b border-charcoal inline"
+              className="underline"
             >
               Dave
             </Link>
@@ -40,7 +40,7 @@ const About = ({}) => (
               href="/media/lush-hike"
               target="_blank"
               rel="noreferrer"
-              className="border-b border-charcoal inline"
+              className="underline"
             >
               trails
             </Link>
@@ -51,8 +51,8 @@ const About = ({}) => (
             <Link
               href="https://unsplash.com/@noahbuscher"
               target="_blank"
-              rel="noreferrer"
-              className="border-b border-charcoal inline"
+              rel="me"
+              className="underline"
             >
               Unsplash
             </Link>
@@ -66,7 +66,7 @@ const About = ({}) => (
               href="mailto:me@noahbuscher.com"
               target="_blank"
               rel="noreferrer"
-              className="border-b border-charcoal inline"
+              className="underline"
             >
               drop me a line
             </Link>
@@ -75,7 +75,7 @@ const About = ({}) => (
           <p className="text-charcoal text-sm leading-7 max-w-lg">
             Other than this site, you can find me on{" "}
             <Link
-              className="border-b border-charcoal inline"
+              className="underline"
               target="_blank"
               rel="me"
               href="https://github.com/noahbuscher"
@@ -84,7 +84,7 @@ const About = ({}) => (
             </Link>{" "}
             and{" "}
             <Link
-              className="border-b border-charcoal inline"
+              className="underline"
               target="_blank"
               rel="me"
               href="https://read.cv/noahbuscher"
