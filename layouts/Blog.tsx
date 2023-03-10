@@ -70,7 +70,7 @@ const Blog = ({ posts }: any) => {
                   >
                     {post.data.type === "Photo" && (
                       <Image
-                        src={post.data.images}
+                        src={post.data.image}
                         alt={post.data.caption}
                         width="0"
                         height="0"
@@ -85,7 +85,7 @@ const Blog = ({ posts }: any) => {
 
                     {post.data.type === "Work" && (
                       <Image
-                        src={post.data.images}
+                        src={post.data.image}
                         alt={post.data.caption}
                         width="0"
                         height="0"

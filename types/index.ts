@@ -13,7 +13,7 @@ export type Post = {
     excerpt?: string;
     caption?: string;
     date: string;
-    images?: string;
+    image?: string;
     location?: string;
     slug: string;
     title?: string;

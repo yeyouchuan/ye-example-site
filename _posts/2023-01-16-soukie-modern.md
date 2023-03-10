@@ -7,7 +7,7 @@ type: Work
 skills: Design, Website
 caption: New e-commerce shop for a Palm Springs Moroccan rug retailer.
 link: https://soukiemodern.com
-images: /media/work/soukie-modern/soukie.jpeg
+image: /media/work/soukie-modern/soukie.jpeg
 ---
 
 Soukie Modern approached me in mid-2022 regarding their need to modernize their existing online shop, as they were looking to start leveraging e-commerce to show potential buyers their expansive collection of vintage and contemporary Moroccan rugs.

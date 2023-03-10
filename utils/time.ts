@@ -5,6 +5,10 @@ import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
+/**
+ * Check if the current time falls within a range; currently
+ * used for the avaibility badge
+ */
 export const isNowWithinTime = (
   start: number,
   end: number,

@@ -9,7 +9,7 @@ const PhotoLayout = ({ exif, post }: { exif: any; post: Post }) => (
       <div className="flex flex-col items-center justify-center gap-8 text-xs text-center max-w-screen-md h-screen mx-auto">
         <div className="relative">
           <Image
-            src={post.data.images!}
+            src={post.data.image!}
             alt={post.data.caption!}
             width="0"
             height="0"

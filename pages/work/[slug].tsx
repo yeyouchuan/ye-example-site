@@ -88,7 +88,7 @@ const Post = ({
       <SEO
         title={`${post.data.title} | Noah Buscher`}
         description={post.data.caption}
-        image={post.data.images}
+        image={post.data.image}
       />
 
       <CaseStudyLayout post={post} renderedPostContent={renderedPostContent} />

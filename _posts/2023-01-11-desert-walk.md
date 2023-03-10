@@ -5,6 +5,6 @@ date: January 11, 2023
 author: Noah Buscher
 location: Thousand Palms, CA
 caption: A walk through desert this afternoon.
-images: /media/photos/jt.jpeg
+image: /media/photos/jt.jpeg
 type: Photo
 ---

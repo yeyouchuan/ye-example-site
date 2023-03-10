@@ -62,7 +62,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   );
 
   const post = posts.find((p) => p?.data?.slug === params.slug);
-  const mediaPath = path.join(MEDIA_DIR, post?.data?.images);
+  const mediaPath = path.join(MEDIA_DIR, post?.data?.image);
 
   return {
     props: {
@@ -111,7 +111,7 @@ const Media = ({ post, exif }: { post: Post; exif: ExifData }) => {
       <SEO
         title={`${post.data.title} | Noah Buscher`}
         description={post.data.caption}
-        image={`https://noahbuscher.com${post.data.images}`}
+        image={`https://noahbuscher.com${post.data.image}`}
       />
       <PhotoLayout exif={exif} post={post} />
     </>
