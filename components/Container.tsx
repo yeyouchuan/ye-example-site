@@ -87,10 +87,10 @@ const Container = ({
               <div className="flex-1 flex-grow bg-[#F4F4F4] text-charcoal px-8 py-8">
                 <div className="max-w-screen-lg mx-auto">
                   <div className="max-w-md my-12 md:my-24 flex flex-col gap-4">
-                    <h1 className="font-serif p-0 m-0 text-gray-dark text-xl">
+                    <h3 className="font-serif p-0 m-0 text-gray-dark text-xl">
                       Have a project idea? Just want to say hi? I’d love to hear
                       from you.
-                    </h1>
+                    </h3>
                     <Link
                       href="mailto:me@noahbuscher.com"
                       className="text-xs text-gray-dark w-fit"

@@ -5,7 +5,6 @@ const SEO_DEFAULTS = {
   title: "Noah Buscher",
   description:
     "Noah Buscher is a web developer and designer based in Palm Springs, CA.",
-  url: "https://noahbuscher.com",
   type: "website",
   site_name: "Noah Buscher",
   image: "https://noahbuscher.com/social-image.jpg",

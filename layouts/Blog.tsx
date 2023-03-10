@@ -27,8 +27,8 @@ const Blog = ({ posts }: any) => {
     <Container>
       <div className="max-w-screen-lg mx-auto flex flex-col mb-8 md:mb-16">
         <h1 className="font-serif flex-1 flex-grow-0 p-0 m-0 text-charcoal text-xl max-w-md mt-32 mb-12 md:mb-24">
-          Hey, I’m Noah Buscher: a web developer based in Palm Springs, CA.
-          Currently working at{" "}
+          Hey, I’m Noah Buscher: a web developer and designer based in Palm
+          Springs, CA. Currently working at{" "}
           <Link
             href="https://dave.com"
             target="_blank"

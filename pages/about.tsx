@@ -11,7 +11,7 @@ const About = ({}) => (
       <div className="flex flex-col gap-8 mt-32 md:mt-14 mb-24">
         <Image
           src="/noah-about.jpeg"
-          alt="A landscape portrait of Noah in a windbreaker with a white background"
+          alt="A portrait of Noah in a red and blue windbreaker with a white background"
           width="0"
           height="0"
           sizes="(max-width: 768px) 100vw,
@@ -20,7 +20,7 @@ const About = ({}) => (
           priority
         />
 
-        <div className="flex flex-col gap-8 max-w-screen-md">
+        <article className="flex flex-col gap-8 max-w-screen-md">
           <p className="text-charcoal text-sm leading-7 max-w-lg">
             Hey, I’m Noah. I’m currently a senior software engineer on the
             frontend infrastructure team at{" "}
@@ -117,7 +117,7 @@ const About = ({}) => (
             <br />
             2019 - 2021
           </p>
-        </div>
+        </article>
       </div>
     </PageLayout>
   </>
