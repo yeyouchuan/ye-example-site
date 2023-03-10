@@ -91,7 +91,12 @@ const Code = ({ node, inline, className, children, ...props }: any): any => {
 };
 
 const Anchor = ({ children, href }: any) => (
-  <Link href={href} className="inline underline">
+  <Link
+    href={href}
+    rel="noreferrer"
+    target="_blank"
+    className="inline underline"
+  >
     {children}
   </Link>
 );
