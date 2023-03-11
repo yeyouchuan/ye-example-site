@@ -79,7 +79,7 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
                         33vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
-                        quality={40}
+                        quality={50}
                       />
                     )}
 
@@ -94,7 +94,7 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
                         33vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
-                        quality={40}
+                        quality={50}
                       />
                     )}
 
