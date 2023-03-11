@@ -10,7 +10,7 @@ link: https://receipt.noahbuscher.com
 image: /media/work/receipt.png
 ---
 
-After discovering the [fake receipt font](https://typodermicfonts.com/fake-receipt/) via Adam Ho's [portfolio](https://www.adamho.com/), I instantly knew what I needed to do. After purchasing the font, I had the website designed and live within an hour. I dynamically populates the date, user agent, and includes clickable links.
+After discovering the [fake receipt font](https://typodermicfonts.com/fake-receipt/) via Adam Ho's [portfolio](https://www.adamho.com/), I instantly knew what I needed to do. After purchasing the font, I had the website designed and live within an hour. It dynamically populates the date nad user agent as well for an even more "authentic" receipt experience.
 
 [Check it out!](https://receipt.noahbuscher.com)
 
