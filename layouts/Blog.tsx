@@ -75,8 +75,7 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
                         width="0"
                         height="0"
                         sizes="(max-width: 768px) 100vw,
-                        (max-width: 1200px) 50vw,
-                        33vw"
+                        50vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
                         quality={50}
@@ -90,8 +89,7 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
                         width="0"
                         height="0"
                         sizes="(max-width: 768px) 100vw,
-                        (max-width: 1200px) 50vw,
-                        33vw"
+                        50vw"
                         className="w-full h-full object-cover"
                         priority={postIndex <= 1}
                         quality={50}
