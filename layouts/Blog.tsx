@@ -7,12 +7,12 @@ import Container from "@/components/Container";
 import FilterBar from "@/components/FilterBar";
 import PostCard from "@/components/PostCard";
 import { CATEGORIES } from "@/types";
-import type { Post } from "@/types";
+import type { Post, Category } from "@/types";
 
-const getFilteredPosts = (posts: Post[], filter: any) =>
+const getFilteredPosts = (posts: Post[], filter: Category) =>
   filter === ""
     ? posts
-    : posts.filter((post: any) => post.data.type === filter);
+    : posts.filter((post: Post) => post.data.type === filter);
 
 const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
   const [isGrid, setIsGrid] = useState(false);
@@ -57,7 +57,7 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
             )}
             <AnimatePresence>
               {getFilteredPosts(posts, selectedFilter).map(
-                (post: any, postIndex: number) => (
+                (post: Post, postIndex: number) => (
                   <PostCard
                     key={post.data.slug}
                     category={CATEGORIES[post.data.type]}
@@ -70,8 +70,8 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
                   >
                     {post.data.type === "Photo" && (
                       <Image
-                        src={post.data.image}
-                        alt={post.data.caption}
+                        src={post.data.image!}
+                        alt={post.data.caption!}
                         width="0"
                         height="0"
                         sizes="(max-width: 768px) 100vw,
@@ -85,8 +85,8 @@ const Blog: React.FC<{ posts: Post[] }> = ({ posts }) => {
 
                     {post.data.type === "Work" && (
                       <Image
-                        src={post.data.image}
-                        alt={post.data.caption}
+                        src={post.data.image!}
+                        alt={post.data.caption!}
                         width="0"
                         height="0"
                         sizes="(max-width: 768px) 100vw,

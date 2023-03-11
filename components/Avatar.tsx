@@ -13,7 +13,7 @@ const Avatar: React.FC<{
     "w-8 h-8": small,
   });
 
-  const activeClassnames = classnames(
+  const indicatorClassnames = classnames(
     "bg-accent rounded-md border-white absolute",
     {
       "w-3 h-3 top-[2px] right-[2px] border-[2px]": !small,
@@ -26,7 +26,7 @@ const Avatar: React.FC<{
       <div className="w-full h-full relative rounded-full overflow-hidden">
         <Image src={image} fill alt={alt} quality={30} />
       </div>
-      {active && <div className={activeClassnames} />}
+      {active && <div className={indicatorClassnames} />}
     </div>
   );
 };

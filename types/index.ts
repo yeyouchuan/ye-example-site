@@ -20,7 +20,7 @@ export type Post = {
     location?: string;
     slug: string;
     title?: string;
-    type?: Category;
+    type: Category;
     skills?: string;
     link?: string;
   };
