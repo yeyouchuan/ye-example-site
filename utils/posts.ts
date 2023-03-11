@@ -5,6 +5,9 @@ import { Post } from "@/types";
 
 const POSTS_DIR = "_posts";
 
+/**
+ * Get all filepaths to posts
+ */
 export const getPostPaths = async (
   relativePostsDir: string
 ): Promise<string[]> => {
