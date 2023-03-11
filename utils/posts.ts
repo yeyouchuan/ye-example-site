@@ -1,10 +1,13 @@
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { Post } from "@/types";
 
 const POSTS_DIR = "_posts";
 
-export const getPostPaths = async (relativePostsDir: string) => {
+export const getPostPaths = async (
+  relativePostsDir: string
+): Promise<string[]> => {
   const files = await fs.readdir(relativePostsDir);
 
   return files.filter((file) => {
@@ -19,7 +22,7 @@ export const getPostPaths = async (relativePostsDir: string) => {
 export const getSlugsByType = async (
   type: string,
   postsDir: string = POSTS_DIR
-) => {
+): Promise<string[]> => {
   const relativePostsDir = path.join(process.cwd(), postsDir);
   const postPaths = await getPostPaths(relativePostsDir);
 
@@ -56,24 +59,31 @@ export const nextifySlugs = (slugs: string[]) => ({
 /**
  * Get an array of all posts with their meta + content
  */
-export const getPosts = async (postsDir: string = POSTS_DIR) => {
+export const getPosts = async (
+  postsDir: string = POSTS_DIR
+): Promise<Post[]> => {
   const relativePostsDir = path.join(process.cwd(), postsDir);
   const postPaths = await getPostPaths(relativePostsDir);
 
   return Promise.all(
-    postPaths.map(async (file: string) => {
-      const contents = await fs.readFile(
-        path.join(relativePostsDir, file),
-        "utf8"
-      );
-      const parsed = matter(contents);
-
-      return {
-        content: parsed.content,
-        data: parsed.data,
-      };
-    })
+    postPaths.map(async (file: string) => getPostByPath(file, relativePostsDir))
   );
+};
+
+/**
+ * Get post from path
+ */
+export const getPostByPath = async (
+  p: string,
+  relativePostsDir: string
+): Promise<Post> => {
+  const contents = await fs.readFile(path.join(relativePostsDir, p), "utf8");
+  const parsed = matter(contents);
+
+  return {
+    content: parsed.content,
+    data: parsed.data as Post["data"],
+  };
 };
 
 /**
