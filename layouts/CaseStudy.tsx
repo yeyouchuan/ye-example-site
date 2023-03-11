@@ -33,7 +33,7 @@ const PostLayout: React.FC<{
               <small className="text-gray">Link</small>
               <Link
                 href={post.data.link}
-                className="block border-b border-gray-dark w-fit mx-auto"
+                className="block underline w-fit mx-auto"
               >
                 Visit site
               </Link>
