@@ -14,12 +14,13 @@ export const getStaticProps = async ({
   params: { slug: string };
 }) => {
   const post = await getPostBySlug(params.slug);
-  const mediaPath = path.join(MEDIA_DIR, post?.data?.image);
 
   return {
     props: {
       post,
-      exif: (await getImageExif(mediaPath)) || null,
+      exif: post?.data.image
+        ? (await getImageExif(path.join(MEDIA_DIR, post.data.image))) || null
+        : null,
     },
   };
 };

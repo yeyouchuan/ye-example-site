@@ -34,7 +34,6 @@ const Post: React.FC<{
       description={post.data.excerpt}
       image={`https://noahbuscher.com${post.data.image}`}
     />
-
     <PostLayout post={post} renderedPostContent={renderedPostContent} />
   </>
 );

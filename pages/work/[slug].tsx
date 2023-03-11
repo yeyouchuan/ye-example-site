@@ -34,7 +34,6 @@ const Post: React.FC<{
       description={post.data.caption}
       image={post.data.image}
     />
-
     <CaseStudyLayout post={post} renderedPostContent={renderedPostContent} />
   </>
 );

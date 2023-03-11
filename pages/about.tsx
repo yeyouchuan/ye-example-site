@@ -19,7 +19,6 @@ const About: React.FC = ({}) => (
           className="w-full h-auto rounded-md"
           priority
         />
-
         <article className="flex flex-col gap-8 max-w-screen-md">
           <p className="text-charcoal text-sm leading-7 max-w-lg">
             Hey, I’m Noah. I’m currently a senior software engineer on the
