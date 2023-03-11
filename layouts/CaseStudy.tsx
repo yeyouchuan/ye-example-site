@@ -34,6 +34,8 @@ const PostLayout: React.FC<{
               <Link
                 href={post.data.link}
                 className="block underline w-fit mx-auto"
+                rel="noreferrer"
+                target="_blank"
               >
                 Visit site
               </Link>
